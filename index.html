@@ -1,2412 +1,3514 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SK Cars - Buy & Sell premium second-hand cars in Tirunelveli. Certified used Maruti, Hyundai, Honda, Toyota, Tata cars. Visit us near Railway Gate, Tachanallur.">
-  <meta property="og:title" content="SK Cars | Premium Used Cars - Tirunelveli">
-  <meta property="og:description" content="Premium second-hand cars in Tirunelveli. Best prices, quality assured. Call +91 99448 66887">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80">
-  <title>SK Cars | Premium Used Cars - Tirunelveli</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SK Cars - Buy & Sell premium second-hand cars in Tirunelveli. Certified used Maruti, Hyundai, Honda, Toyota, Tata cars. Visit us near Railway Gate, Thachanallur."
+    />
+    <meta
+      property="og:title"
+      content="SK Cars | Premium Used Cars - Tirunelveli"
+    />
+    <meta
+      property="og:description"
+      content="Premium second-hand cars in Tirunelveli. Best prices, quality assured. Call +91 99448 66887"
+    />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80"
+    />
+    <title>SK Cars | Premium Used Cars - Tirunelveli</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  <style>
-    /* ============================================================
+    <style>
+      /* ============================================================
        1. CSS VARIABLES & RESET
     ============================================================ */
-    :root {
-      --black:       #1D1616;
-      --navy:        #8E1616;
-      --navy-mid:    #4A1010;
-      --gold:        #D84040;
-      --gold-bright: #E85555;
-      --gold-glow:   rgba(216,64,64,0.18);
-      --red:         #D84040;
-      --red-glow:    rgba(216,64,64,0.20);
-      --text:        #EEEEEE;
-      --text-muted:  #C0B8B8;
-      --text-dim:    #8A7A7A;
-      --glass-bg:    rgba(255,255,255,0.05);
-      --glass-gold:  rgba(216,64,64,0.06);
-      --glass-border:rgba(255,255,255,0.10);
-      --gold-border: rgba(216,64,64,0.30);
-      --font-display:'Orbitron', monospace;
-      --font-heading:'Rajdhani', sans-serif;
-      --font-body:   'Inter', sans-serif;
-      --radius:      16px;
-      --radius-sm:   8px;
-      --section-gap: 100px;
-    }
+      :root {
+        --black: #1d1616;
+        --navy: #8e1616;
+        --navy-mid: #4a1010;
+        --gold: #d84040;
+        --gold-bright: #e85555;
+        --gold-glow: rgba(216, 64, 64, 0.18);
+        --red: #d84040;
+        --red-glow: rgba(216, 64, 64, 0.2);
+        --text: #eeeeee;
+        --text-muted: #c0b8b8;
+        --text-dim: #8a7a7a;
+        --glass-bg: rgba(255, 255, 255, 0.05);
+        --glass-gold: rgba(216, 64, 64, 0.06);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --gold-border: rgba(216, 64, 64, 0.3);
+        --font-display: "Orbitron", monospace;
+        --font-heading: "Rajdhani", sans-serif;
+        --font-body: "Inter", sans-serif;
+        --radius: 16px;
+        --radius-sm: 8px;
+        --section-gap: 100px;
+      }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    html {
-      scroll-behavior: smooth;
-      scrollbar-width: thin;
-      scrollbar-color: #D84040 #4A1010;
-    }
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #4A1010; }
-    ::-webkit-scrollbar-thumb { background: #D84040; border-radius: 3px; }
+      html {
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: #d84040 #4a1010;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #4a1010;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d84040;
+        border-radius: 3px;
+      }
 
-    body {
-      background: var(--black);
-      color: var(--text);
-      font-family: var(--font-body);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
+      body {
+        background: var(--black);
+        color: var(--text);
+        font-family: var(--font-body);
+        overflow-x: hidden;
+        line-height: 1.6;
+      }
 
-    a { text-decoration: none; color: inherit; }
-    img { display: block; max-width: 100%; }
-    button { cursor: pointer; font-family: inherit; }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      button {
+        cursor: pointer;
+        font-family: inherit;
+      }
 
-    /* ============================================================
+      /* ============================================================
        2. UTILITY CLASSES
     ============================================================ */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
 
-    .section-pad {
-      padding: var(--section-gap) 0;
-    }
+      .section-pad {
+        padding: var(--section-gap) 0;
+      }
 
-    /* Glass variants */
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid var(--glass-border);
-      border-radius: var(--radius);
-    }
+      /* Glass variants */
+      .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid var(--glass-border);
+        border-radius: var(--radius);
+      }
 
-    .glass-gold {
-      background: var(--glass-gold);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid var(--gold-border);
-      border-radius: var(--radius);
-      box-shadow: 0 0 30px rgba(216,64,64,0.08), inset 0 1px 0 rgba(255,255,255,0.08);
-    }
+      .glass-gold {
+        background: var(--glass-gold);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid var(--gold-border);
+        border-radius: var(--radius);
+        box-shadow:
+          0 0 30px rgba(216, 64, 64, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      }
 
-    .glass-dark {
-      background: rgba(29,22,22,0.80);
-      backdrop-filter: blur(24px) saturate(200%);
-      -webkit-backdrop-filter: blur(24px) saturate(200%);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius);
-    }
+      .glass-dark {
+        background: rgba(29, 22, 22, 0.8);
+        backdrop-filter: blur(24px) saturate(200%);
+        -webkit-backdrop-filter: blur(24px) saturate(200%);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+      }
 
-    /* Grids */
-    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+      /* Grids */
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
 
-    /* Section tag */
-    .section-tag {
-      font-family: var(--font-heading);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .section-tag::before, .section-tag::after {
-      content: '';
-      display: block;
-      height: 1px;
-      width: 40px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-    }
-    .section-tag::after { background: linear-gradient(270deg, var(--gold), transparent); }
+      /* Section tag */
+      .section-tag {
+        font-family: var(--font-heading);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+      .section-tag::before,
+      .section-tag::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 40px;
+        background: linear-gradient(90deg, var(--gold), transparent);
+      }
+      .section-tag::after {
+        background: linear-gradient(270deg, var(--gold), transparent);
+      }
 
-    .section-title {
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-weight: 700;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
 
-    .section-title span { color: var(--gold); }
+      .section-title span {
+        color: var(--gold);
+      }
 
-    .section-sub {
-      font-size: 1rem;
-      color: var(--text-muted);
-      max-width: 560px;
-      margin: 0 auto 3rem;
-    }
+      .section-sub {
+        font-size: 1rem;
+        color: var(--text-muted);
+        max-width: 560px;
+        margin: 0 auto 3rem;
+      }
 
-    .text-center { text-align: center; }
-    .text-center .section-tag { justify-content: center; }
-    .text-center .section-tag::before,
-    .text-center .section-tag::after { display: none; }
+      .text-center {
+        text-align: center;
+      }
+      .text-center .section-tag {
+        justify-content: center;
+      }
+      .text-center .section-tag::before,
+      .text-center .section-tag::after {
+        display: none;
+      }
 
-    /* Reveal animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+      /* Reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
-    .reveal-stagger > * {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:none; transition-delay:0.05s; }
-    .reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:none; transition-delay:0.15s; }
-    .reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:none; transition-delay:0.25s; }
-    .reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:none; transition-delay:0.35s; }
-    .reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:none; transition-delay:0.45s; }
-    .reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:none; transition-delay:0.55s; }
+      .reveal-stagger > * {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal-stagger.visible > *:nth-child(1) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.05s;
+      }
+      .reveal-stagger.visible > *:nth-child(2) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.15s;
+      }
+      .reveal-stagger.visible > *:nth-child(3) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.25s;
+      }
+      .reveal-stagger.visible > *:nth-child(4) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.35s;
+      }
+      .reveal-stagger.visible > *:nth-child(5) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.45s;
+      }
+      .reveal-stagger.visible > *:nth-child(6) {
+        opacity: 1;
+        transform: none;
+        transition-delay: 0.55s;
+      }
 
-    /* Buttons */
-    .btn {
-      position: relative;
-      overflow: hidden;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.85rem 2rem;
-      border: none;
-      border-radius: var(--radius-sm);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
-      transform: skewX(-20deg);
-      transition: left 0.5s ease;
-    }
-    .btn:hover::before { left: 160%; }
-    .btn:hover { transform: translateY(-2px); }
-    .btn:active { transform: translateY(0); }
+      /* Buttons */
+      .btn {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.85rem 2rem;
+        border: none;
+        border-radius: var(--radius-sm);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.45),
+          transparent
+        );
+        transform: skewX(-20deg);
+        transition: left 0.5s ease;
+      }
+      .btn:hover::before {
+        left: 160%;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
 
-    .btn-gold {
-      background: linear-gradient(135deg, #D84040, #E85555);
-      color: #EEEEEE;
-      box-shadow: 0 4px 20px rgba(216,64,64,0.40), inset 0 1px 0 rgba(255,255,255,0.25);
-    }
-    .btn-gold:hover { box-shadow: 0 8px 30px rgba(216,64,64,0.60), inset 0 1px 0 rgba(255,255,255,0.30); }
+      .btn-gold {
+        background: linear-gradient(135deg, #d84040, #e85555);
+        color: #eeeeee;
+        box-shadow:
+          0 4px 20px rgba(216, 64, 64, 0.4),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      }
+      .btn-gold:hover {
+        box-shadow:
+          0 8px 30px rgba(216, 64, 64, 0.6),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
 
-    .btn-whatsapp {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.35), inset 0 1px 0 rgba(255,255,255,0.25);
-    }
-    .btn-whatsapp:hover { box-shadow: 0 8px 30px rgba(37,211,102,0.55), inset 0 1px 0 rgba(255,255,255,0.25); }
+      .btn-whatsapp {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: #fff;
+        box-shadow:
+          0 4px 20px rgba(37, 211, 102, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      }
+      .btn-whatsapp:hover {
+        box-shadow:
+          0 8px 30px rgba(37, 211, 102, 0.55),
+          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      }
 
-    .btn-outline {
-      background: transparent;
-      color: var(--gold);
-      border: 1px solid var(--gold-border);
-      box-shadow: none;
-    }
-    .btn-outline:hover { background: var(--glass-gold); border-color: var(--gold); }
+      .btn-outline {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold-border);
+        box-shadow: none;
+      }
+      .btn-outline:hover {
+        background: var(--glass-gold);
+        border-color: var(--gold);
+      }
 
-    /* ============================================================
+      /* ============================================================
        3. NAVBAR
     ============================================================ */
-    #navbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      padding: 1.1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
-    }
-    #navbar.scrolled {
-      padding: 0.75rem 2rem;
-      background: rgba(29,22,22,0.92);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-bottom: 1px solid rgba(216,64,64,0.18);
-      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
-    }
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 1.1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition:
+          background 0.35s ease,
+          box-shadow 0.35s ease,
+          padding 0.35s ease;
+      }
+      #navbar.scrolled {
+        padding: 0.75rem 2rem;
+        background: rgba(29, 22, 22, 0.92);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid rgba(216, 64, 64, 0.18);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      }
 
-    .nav-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .nav-logo-img {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid rgba(216,64,64,0.50);
-      box-shadow: 0 0 12px rgba(216,64,64,0.30);
-    }
-    .logo-sk { color: var(--gold); }
-    .logo-cars {
-      color: var(--text);
-      position: relative;
-    }
-    .logo-cars::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-    }
+      .nav-logo {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-logo-img {
+        width: 48px;
+        height: 48px;
+        border-radius: 0;
+        object-fit: contain;
+        border: none;
+        filter: drop-shadow(0 0 8px rgba(216, 64, 64, 0.45));
+      }
+      .logo-sk {
+        color: var(--gold);
+      }
+      .logo-cars {
+        color: var(--text);
+        position: relative;
+      }
+      .logo-cars::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), transparent);
+      }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      transition: color 0.2s ease;
-      position: relative;
-    }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0; right: 0;
-      height: 2px;
-      background: var(--gold);
-      transform: scaleX(0);
-      transition: transform 0.25s ease;
-      transform-origin: left;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--text); }
-    .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        transition: color 0.2s ease;
+        position: relative;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gold);
+        transform: scaleX(0);
+        transition: transform 0.25s ease;
+        transform-origin: left;
+      }
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--text);
+      }
+      .nav-links a:hover::after,
+      .nav-links a.active::after {
+        transform: scaleX(1);
+      }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 0.4rem;
-      z-index: 1001;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--gold);
-      border-radius: 2px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.active span:nth-child(2) { opacity: 0; }
-    .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        padding: 0.4rem;
+        z-index: 1001;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--gold);
+        border-radius: 2px;
+        transition:
+          transform 0.3s ease,
+          opacity 0.3s ease;
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
 
-    /* ============================================================
+      /* ============================================================
        4. HERO
     ============================================================ */
-    #hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
+      #hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
 
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 120% 80% at 70% 40%, #8E1616 0%, #4A1010 40%, #1D1616 75%);
-      animation: hero-pulse 8s ease-in-out infinite alternate;
-    }
-    @keyframes hero-pulse {
-      from { opacity: 0.9; }
-      to   { opacity: 1; }
-    }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse 120% 80% at 70% 40%,
+          #8e1616 0%,
+          #4a1010 40%,
+          #1d1616 75%
+        );
+        animation: hero-pulse 8s ease-in-out infinite alternate;
+      }
+      @keyframes hero-pulse {
+        from {
+          opacity: 0.9;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
-    .hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(29,22,22,0.85) 0%, rgba(142,22,22,0.45) 55%, rgba(29,22,22,0.88) 100%);
-    }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(29, 22, 22, 0.85) 0%,
+          rgba(142, 22, 22, 0.45) 55%,
+          rgba(29, 22, 22, 0.88) 100%
+        );
+      }
 
-    .hero-fade {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 220px;
-      background: linear-gradient(to top, var(--black), transparent);
-      pointer-events: none;
-    }
+      .hero-fade {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 220px;
+        background: linear-gradient(to top, var(--black), transparent);
+        pointer-events: none;
+      }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem 0;
-    }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding: 2rem 0;
+      }
 
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: var(--font-heading);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #D84040;
-      padding: 0.4rem 1rem;
-      border: 1px solid rgba(216,64,64,0.40);
-      border-radius: 100px;
-      background: rgba(216,64,64,0.08);
-      margin-bottom: 1.5rem;
-      animation: fade-up 0.8s ease 0.1s both;
-    }
-    .hero-tag i { font-size: 0.7rem; }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-heading);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #d84040;
+        padding: 0.4rem 1rem;
+        border: 1px solid rgba(216, 64, 64, 0.4);
+        border-radius: 100px;
+        background: rgba(216, 64, 64, 0.08);
+        margin-bottom: 1.5rem;
+        animation: fade-up 0.8s ease 0.1s both;
+      }
+      .hero-tag i {
+        font-size: 0.7rem;
+      }
 
-    .hero-headline {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      margin-bottom: 1.25rem;
-    }
-    .hero-line-1 {
-      display: block;
-      color: var(--text);
-      animation: fade-up 0.8s ease 0.3s both;
-    }
-    .hero-line-2 {
-      display: block;
-      background: linear-gradient(90deg, #D84040, #D84040, #EEEEEE, #D84040);
-      background-size: 250% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fade-up 0.8s ease 0.55s both, shimmer-text 4s linear 1.5s infinite;
-    }
-    @keyframes shimmer-text {
-      to { background-position: 250% center; }
-    }
+      .hero-headline {
+        font-family: var(--font-display);
+        font-size: clamp(2.8rem, 8vw, 5.5rem);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+      }
+      .hero-line-1 {
+        display: block;
+        color: var(--text);
+        animation: fade-up 0.8s ease 0.3s both;
+      }
+      .hero-line-2 {
+        display: block;
+        background: linear-gradient(90deg, #d84040, #d84040, #eeeeee, #d84040);
+        background-size: 250% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation:
+          fade-up 0.8s ease 0.55s both,
+          shimmer-text 4s linear 1.5s infinite;
+      }
+      @keyframes shimmer-text {
+        to {
+          background-position: 250% center;
+        }
+      }
 
-    .hero-sub {
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--text-muted);
-      max-width: 520px;
-      margin-bottom: 2.5rem;
-      animation: fade-up 0.8s ease 0.75s both;
-    }
+      .hero-sub {
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        color: var(--text-muted);
+        max-width: 520px;
+        margin-bottom: 2.5rem;
+        animation: fade-up 0.8s ease 0.75s both;
+      }
 
-    .hero-ctas {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      animation: fade-up 0.8s ease 0.95s both;
-    }
+      .hero-ctas {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        animation: fade-up 0.8s ease 0.95s both;
+      }
 
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 3.5rem;
-      animation: fade-up 0.8s ease 1.15s both;
-    }
-    .hero-stat-num {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .hero-stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-top: 0.2rem;
-    }
-    .hero-stat-divider {
-      width: 1px;
-      height: 40px;
-      background: rgba(255,255,255,0.15);
-      align-self: center;
-    }
+      .hero-stats {
+        display: flex;
+        gap: 2.5rem;
+        margin-top: 3.5rem;
+        animation: fade-up 0.8s ease 1.15s both;
+      }
+      .hero-stat-num {
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .hero-stat-label {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 0.2rem;
+      }
+      .hero-stat-divider {
+        width: 1px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.15);
+        align-self: center;
+      }
 
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+      @keyframes fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.4rem;
-      color: var(--text-muted);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      animation: fade-up 1s ease 1.5s both;
-    }
-    .scroll-indicator i {
-      font-size: 1.1rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(6px); }
-    }
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        color: var(--text-muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        animation: fade-up 1s ease 1.5s both;
+      }
+      .scroll-indicator i {
+        font-size: 1.1rem;
+        animation: bounce 2s ease-in-out infinite;
+      }
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(6px);
+        }
+      }
 
-    /* ============================================================
+      /* ============================================================
        5. ABOUT
     ============================================================ */
-    #about {
-      background: var(--black);
-    }
+      #about {
+        background: var(--black);
+      }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
 
-    .about-text p {
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-      font-size: 0.97rem;
-      line-height: 1.75;
-    }
+      .about-text p {
+        color: var(--text-muted);
+        margin-bottom: 1.25rem;
+        font-size: 0.97rem;
+        line-height: 1.75;
+      }
 
-    .about-mini-stats {
-      display: flex;
-      gap: 1.5rem;
-      margin: 1.75rem 0;
-      flex-wrap: wrap;
-    }
-    .about-stat {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-    }
-    .about-stat i { color: var(--gold); font-size: 0.9rem; }
+      .about-mini-stats {
+        display: flex;
+        gap: 1.5rem;
+        margin: 1.75rem 0;
+        flex-wrap: wrap;
+      }
+      .about-stat {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+      }
+      .about-stat i {
+        color: var(--gold);
+        font-size: 0.9rem;
+      }
 
-    .rating-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      background: rgba(216,64,64,0.10);
-      border: 1px solid rgba(216,64,64,0.28);
-      border-radius: 100px;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--gold);
-      margin-top: 0.5rem;
-    }
-    .rating-badge .stars { color: var(--gold); font-size: 0.75rem; }
+      .rating-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background: rgba(216, 64, 64, 0.1);
+        border: 1px solid rgba(216, 64, 64, 0.28);
+        border-radius: 100px;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--gold);
+        margin-top: 0.5rem;
+      }
+      .rating-badge .stars {
+        color: var(--gold);
+        font-size: 0.75rem;
+      }
 
-    .about-address {
-      margin-top: 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-    .about-address i {
-      color: var(--gold);
-      margin-top: 0.2rem;
-      flex-shrink: 0;
-    }
+      .about-address {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+      .about-address i {
+        color: var(--gold);
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+      }
 
-    .about-visual {
-      position: relative;
-    }
-    .about-visual-inner {
-      background: linear-gradient(135deg, #2A1010 0%, #3D1010 100%);
-      border: 1px solid rgba(216,64,64,0.25);
-      border-radius: var(--radius);
-      padding: 3rem 2rem;
-      text-align: center;
-      box-shadow: 0 0 60px rgba(216,64,64,0.08), inset 0 1px 0 rgba(255,255,255,0.05);
-      position: relative;
-      overflow: hidden;
-    }
-    .about-visual-inner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #D84040, transparent);
-    }
-    .about-big-icon {
-      font-size: 6rem;
-      color: rgba(216,64,64,0.20);
-      margin-bottom: 2.5rem;
-      line-height: 1;
-    }
-    .about-visual-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-    .about-vis-stat {
-      background: rgba(216,64,64,0.06);
-      border: 1px solid rgba(216,64,64,0.18);
-      border-radius: var(--radius-sm);
-      padding: 1.25rem;
-      transition: background 0.25s ease, border-color 0.25s ease;
-    }
-    .about-vis-stat:hover {
-      background: rgba(216,64,64,0.10);
-      border-color: rgba(216,64,64,0.35);
-    }
-    .about-vis-num {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .about-vis-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-top: 0.3rem;
-    }
+      .about-visual {
+        position: relative;
+      }
+      .about-visual-inner {
+        background: linear-gradient(135deg, #2a1010 0%, #3d1010 100%);
+        border: 1px solid rgba(216, 64, 64, 0.25);
+        border-radius: var(--radius);
+        padding: 3rem 2rem;
+        text-align: center;
+        box-shadow:
+          0 0 60px rgba(216, 64, 64, 0.08),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        position: relative;
+        overflow: hidden;
+      }
+      .about-visual-inner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d84040, transparent);
+      }
+      .about-big-icon {
+        font-size: 6rem;
+        color: rgba(216, 64, 64, 0.2);
+        margin-bottom: 2.5rem;
+        line-height: 1;
+      }
+      .about-visual-stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      .about-vis-stat {
+        background: rgba(216, 64, 64, 0.06);
+        border: 1px solid rgba(216, 64, 64, 0.18);
+        border-radius: var(--radius-sm);
+        padding: 1.25rem;
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .about-vis-stat:hover {
+        background: rgba(216, 64, 64, 0.1);
+        border-color: rgba(216, 64, 64, 0.35);
+      }
+      .about-vis-num {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+      }
+      .about-vis-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-top: 0.3rem;
+      }
 
-    /* ============================================================
+      /* ============================================================
        6. SERVICES
     ============================================================ */
-    #services {
-      background: #0E0808;
-    }
+      #services {
+        background: #0e0808;
+      }
 
-    .service-card {
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.5), 0 0 25px rgba(216,64,64,0.12);
-      border-color: rgba(216,64,64,0.45);
-    }
+      .service-card {
+        padding: 2rem;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        box-shadow:
+          0 16px 50px rgba(0, 0, 0, 0.5),
+          0 0 25px rgba(216, 64, 64, 0.12);
+        border-color: rgba(216, 64, 64, 0.45);
+      }
 
-    .service-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, rgba(216,64,64,0.18), rgba(216,64,64,0.05));
-      border: 1px solid rgba(216,64,64,0.28);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-    }
+      .service-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          rgba(216, 64, 64, 0.18),
+          rgba(216, 64, 64, 0.05)
+        );
+        border: 1px solid rgba(216, 64, 64, 0.28);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        color: var(--gold);
+        margin-bottom: 1.25rem;
+      }
 
-    .service-title {
-      font-family: var(--font-heading);
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.6rem;
-    }
+      .service-title {
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
 
-    .service-desc {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+      .service-desc {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
 
-    /* ============================================================
+      /* ============================================================
        7. FEATURED CARS
     ============================================================ */
-    #cars {
-      background: linear-gradient(180deg, #4A1010 0%, var(--navy-mid) 100%);
-    }
+      #cars {
+        background: linear-gradient(180deg, #4a1010 0%, var(--navy-mid) 100%);
+      }
 
-    .car-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius);
-      background: rgba(29,22,22,0.90);
-      border: 1px solid rgba(216,64,64,0.18);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-    .car-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(216,64,64,0.55), transparent);
-      z-index: 1;
-    }
-    .car-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 30px rgba(216,64,64,0.12);
-      border-color: rgba(216,64,64,0.45);
-    }
+      .car-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--radius);
+        background: rgba(29, 22, 22, 0.9);
+        border: 1px solid rgba(216, 64, 64, 0.18);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .car-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(216, 64, 64, 0.55),
+          transparent
+        );
+        z-index: 1;
+      }
+      .car-card:hover {
+        transform: translateY(-8px);
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.6),
+          0 0 30px rgba(216, 64, 64, 0.12);
+        border-color: rgba(216, 64, 64, 0.45);
+      }
 
-    .car-img-wrap {
-      position: relative;
-      overflow: hidden;
-      height: 180px;
-      background: linear-gradient(135deg, #2A1010 0%, #3D1010 50%, #2A1010 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .car-img-wrap::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(216,64,64,0.08) 0%, transparent 60%, rgba(216,64,64,0.05) 100%);
-      pointer-events: none;
-    }
-    .car-placeholder-icon {
-      font-size: 5rem;
-      color: rgba(216,64,64,0.25);
-      transition: color 0.3s ease, transform 0.3s ease;
-      z-index: 1;
-    }
-    .car-card:hover .car-placeholder-icon {
-      color: rgba(216,64,64,0.45);
-      transform: scale(1.08);
-    }
-    .car-placeholder-lines {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, #D84040, transparent);
-      opacity: 0.5;
-    }
+      .car-img-wrap {
+        position: relative;
+        overflow: hidden;
+        height: 180px;
+        background: linear-gradient(
+          135deg,
+          #2a1010 0%,
+          #3d1010 50%,
+          #2a1010 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .car-img-wrap::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(216, 64, 64, 0.08) 0%,
+          transparent 60%,
+          rgba(216, 64, 64, 0.05) 100%
+        );
+        pointer-events: none;
+      }
+      .car-placeholder-icon {
+        font-size: 5rem;
+        color: rgba(216, 64, 64, 0.25);
+        transition:
+          color 0.3s ease,
+          transform 0.3s ease;
+        z-index: 1;
+      }
+      .car-card:hover .car-placeholder-icon {
+        color: rgba(216, 64, 64, 0.45);
+        transform: scale(1.08);
+      }
+      .car-placeholder-lines {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #d84040, transparent);
+        opacity: 0.5;
+      }
 
-    .car-badge {
-      position: absolute;
-      top: 0.75rem;
-      left: 0.75rem;
-      z-index: 2;
-      display: inline-block;
-      background: rgba(216,64,64,0.12);
-      border: 1px solid rgba(216,64,64,0.45);
-      color: #D84040;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      padding: 0.22rem 0.65rem;
-      border-radius: 5px;
-    }
+      .car-badge {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 2;
+        display: inline-block;
+        background: rgba(216, 64, 64, 0.12);
+        border: 1px solid rgba(216, 64, 64, 0.45);
+        color: #d84040;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 0.22rem 0.65rem;
+        border-radius: 5px;
+      }
 
-    .car-body { padding: 1.25rem; }
+      .car-body {
+        padding: 1.25rem;
+      }
 
-    .car-make {
-      font-size: 0.75rem;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 0.25rem;
-    }
+      .car-make {
+        font-size: 0.75rem;
+        color: var(--gold);
+        font-family: var(--font-heading);
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+      }
 
-    .car-model {
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
+      .car-model {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
 
-    .car-meta {
-      display: flex;
-      gap: 1.25rem;
-      margin-bottom: 1rem;
-    }
-    .car-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-    .car-meta-item i { color: var(--gold); font-size: 0.7rem; }
+      .car-meta {
+        display: flex;
+        gap: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .car-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+      .car-meta-item i {
+        color: var(--gold);
+        font-size: 0.7rem;
+      }
 
-    .car-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 0.85rem;
-      border-top: 1px solid rgba(255,255,255,0.07);
-    }
-    .car-price {
-      font-family: var(--font-heading);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
-    .car-price span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 400;
-    }
+      .car-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0.85rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .car-price {
+        font-family: var(--font-heading);
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: var(--gold);
+      }
+      .car-price span {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        font-weight: 400;
+      }
 
-    .btn-enquire {
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.55rem 1.4rem;
-      background: transparent;
-      color: #D84040;
-      border: 1px solid rgba(216,64,64,0.40);
-      border-radius: 6px;
-      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-    }
-    .btn-enquire:hover {
-      background: rgba(216,64,64,0.10);
-      border-color: #D84040;
-      color: #EEEEEE;
-    }
+      .btn-enquire {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 0.78rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.55rem 1.4rem;
+        background: transparent;
+        color: #d84040;
+        border: 1px solid rgba(216, 64, 64, 0.4);
+        border-radius: 6px;
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease,
+          color 0.2s ease;
+      }
+      .btn-enquire:hover {
+        background: rgba(216, 64, 64, 0.1);
+        border-color: #d84040;
+        color: #eeeeee;
+      }
 
-    /* ============================================================
+      /* ============================================================
        8. WHY CHOOSE US
     ============================================================ */
-    #why-us {
-      background: var(--black);
-    }
+      #why-us {
+        background: var(--black);
+      }
 
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 4rem;
-    }
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+      }
 
-    .stat-card {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      transition: transform 0.3s ease;
-    }
-    .stat-card:hover { transform: translateY(-4px); }
+      .stat-card {
+        text-align: center;
+        padding: 2rem 1.5rem;
+        transition: transform 0.3s ease;
+      }
+      .stat-card:hover {
+        transform: translateY(-4px);
+      }
 
-    .stat-num {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .stat-suffix {
-      font-size: 1.8rem;
-      color: var(--gold);
-    }
-    .stat-label {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-top: 0.5rem;
-    }
+      .stat-num {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
+        margin-bottom: 0.3rem;
+      }
+      .stat-suffix {
+        font-size: 1.8rem;
+        color: var(--gold);
+      }
+      .stat-label {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-top: 0.5rem;
+      }
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
 
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.25rem;
-      border-radius: var(--radius-sm);
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      transition: background 0.25s ease, border-color 0.25s ease;
-    }
-    .feature-item:hover {
-      background: rgba(216,64,64,0.05);
-      border-color: rgba(216,64,64,0.25);
-    }
-    .feature-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      background: rgba(216,64,64,0.12);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-    .feature-text strong {
-      display: block;
-      font-family: var(--font-heading);
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .feature-text span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+      .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        transition:
+          background 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .feature-item:hover {
+        background: rgba(216, 64, 64, 0.05);
+        border-color: rgba(216, 64, 64, 0.25);
+      }
+      .feature-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: rgba(216, 64, 64, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .feature-text strong {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      .feature-text span {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+      }
 
-    /* ============================================================
+      /* ============================================================
        9. TESTIMONIALS
     ============================================================ */
-    #testimonials {
-      background: linear-gradient(180deg, var(--navy-mid) 0%, #4A1010 100%);
-    }
+      #testimonials {
+        background: linear-gradient(180deg, var(--navy-mid) 0%, #4a1010 100%);
+      }
 
-    .testimonial-card {
-      padding: 2rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.4);
-    }
+      .testimonial-card {
+        padding: 2rem;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.4);
+      }
 
-    .testi-stars {
-      color: var(--gold);
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
+      .testi-stars {
+        color: var(--gold);
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+      }
 
-    .testi-quote {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      font-style: italic;
-      line-height: 1.75;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-    .testi-quote::before {
-      content: '\201C';
-      font-size: 3rem;
-      color: rgba(216,64,64,0.25);
-      font-family: Georgia, serif;
-      line-height: 0;
-      position: absolute;
-      top: 0.5rem;
-      left: -0.3rem;
-    }
+      .testi-quote {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-style: italic;
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+      .testi-quote::before {
+        content: "\201C";
+        font-size: 3rem;
+        color: rgba(216, 64, 64, 0.25);
+        font-family: Georgia, serif;
+        line-height: 0;
+        position: absolute;
+        top: 0.5rem;
+        left: -0.3rem;
+      }
 
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-    .testi-avatar {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #D84040, #8E1616);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1rem;
-      color: #EEEEEE;
-      flex-shrink: 0;
-    }
-    .testi-name {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .testi-loc {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+      }
+      .testi-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #d84040, #8e1616);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1rem;
+        color: #eeeeee;
+        flex-shrink: 0;
+      }
+      .testi-name {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .testi-loc {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
 
-    /* ============================================================
+      /* ============================================================
        10. CONTACT
     ============================================================ */
-    #contact {
-      background: var(--black);
-    }
+      #contact {
+        background: var(--black);
+      }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 3rem;
-      align-items: start;
-    }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 3rem;
+        align-items: start;
+      }
 
-    .contact-info-title {
-      font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.75rem;
-    }
+      .contact-info-title {
+        font-family: var(--font-heading);
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.75rem;
+      }
 
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .contact-item-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: rgba(216,64,64,0.12);
-      border: 1px solid rgba(216,64,64,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-    .contact-item-label {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.2rem;
-    }
-    .contact-item-val {
-      font-family: var(--font-heading);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .contact-item-val a { color: var(--text); transition: color 0.2s ease; }
-    .contact-item-val a:hover { color: var(--gold); }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-item-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(216, 64, 64, 0.12);
+        border: 1px solid rgba(216, 64, 64, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold);
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .contact-item-label {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        margin-bottom: 0.2rem;
+      }
+      .contact-item-val {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .contact-item-val a {
+        color: var(--text);
+        transition: color 0.2s ease;
+      }
+      .contact-item-val a:hover {
+        color: var(--gold);
+      }
 
-    .contact-social {
-      display: flex;
-      gap: 0.85rem;
-      margin-top: 2rem;
-    }
-    .social-btn {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .social-btn:hover { transform: translateY(-3px); }
-    .social-btn-ig {
-      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-      color: #fff;
-    }
-    .social-btn-wa {
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      color: #fff;
-    }
-    .social-btn-ph {
-      background: rgba(216,64,64,0.18);
-      border: 1px solid rgba(216,64,64,0.28);
-      color: var(--gold);
-    }
+      .contact-social {
+        display: flex;
+        gap: 0.85rem;
+        margin-top: 2rem;
+      }
+      .social-btn {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease;
+      }
+      .social-btn:hover {
+        transform: translateY(-3px);
+      }
+      .social-btn-ig {
+        background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        color: #fff;
+      }
+      .social-btn-wa {
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        color: #fff;
+      }
+      .social-btn-ph {
+        background: rgba(216, 64, 64, 0.18);
+        border: 1px solid rgba(216, 64, 64, 0.28);
+        color: var(--gold);
+      }
 
-    /* Contact cards full-width row */
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-    }
-    .contact-card-item {
-      text-align: center;
-      padding: 2rem 1.25rem;
-      background: rgba(30,10,10,0.60);
-      border: 1px solid rgba(216,64,64,0.18);
-      border-radius: var(--radius);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-      backdrop-filter: blur(8px);
-    }
-    .contact-card-item:hover {
-      border-color: rgba(216,64,64,0.50);
-      box-shadow: 0 8px 30px rgba(216,64,64,0.12);
-    }
-    .contact-card-item .contact-item-icon {
-      width: 52px;
-      height: 52px;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-    }
-    .contact-card-item .contact-item-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-    .contact-card-item .contact-item-val {
-      font-family: var(--font-heading);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.5;
-    }
-    .contact-card-item .contact-item-val a { color: var(--text); transition: color 0.2s; }
-    .contact-card-item .contact-item-val a:hover { color: var(--gold); }
+      /* Contact cards full-width row */
+      .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+      }
+      .contact-card-item {
+        text-align: center;
+        padding: 2rem 1.25rem;
+        background: rgba(30, 10, 10, 0.6);
+        border: 1px solid rgba(216, 64, 64, 0.18);
+        border-radius: var(--radius);
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+        backdrop-filter: blur(8px);
+      }
+      .contact-card-item:hover {
+        border-color: rgba(216, 64, 64, 0.5);
+        box-shadow: 0 8px 30px rgba(216, 64, 64, 0.12);
+      }
+      .contact-card-item .contact-item-icon {
+        width: 52px;
+        height: 52px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+      }
+      .contact-card-item .contact-item-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        margin-bottom: 0.5rem;
+      }
+      .contact-card-item .contact-item-val {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .contact-card-item .contact-item-val a {
+        color: var(--text);
+        transition: color 0.2s;
+      }
+      .contact-card-item .contact-item-val a:hover {
+        color: var(--gold);
+      }
 
-    .map-wrap {
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid rgba(216,64,64,0.18);
-    }
-    .map-wrap iframe {
-      display: block;
-      width: 100%;
-      height: 340px;
-      filter: invert(90%) hue-rotate(180deg) saturate(0.7);
-    }
+      .map-split {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid rgba(216, 64, 64, 0.22);
+        min-height: 380px;
+      }
+      .map-info-panel {
+        background: rgba(20, 6, 6, 0.92);
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        border-right: 1px solid rgba(216, 64, 64, 0.18);
+      }
+      .map-info-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(216, 64, 64, 0.15);
+      }
+      .map-info-brand-icon {
+        width: 38px; height: 38px;
+        background: rgba(216, 64, 64, 0.12);
+        border: 1px solid rgba(216, 64, 64, 0.3);
+        border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        color: #d84040; font-size: 1rem; flex-shrink: 0;
+      }
+      .map-info-brand-name {
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .map-info-brand-sub {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+      }
+      .map-info-row {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+      .map-info-row i {
+        color: #d84040;
+        font-size: 0.85rem;
+        flex-shrink: 0;
+        margin-top: 0.15rem;
+      }
+      .map-info-row-label {
+        font-size: 0.68rem;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.15rem;
+      }
+      .map-info-row-val {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+      .map-info-row-val a { color: var(--text-muted); }
+      .map-info-row-val a:hover { color: #d84040; }
+      .map-info-badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        color: #d84040;
+        border: 1px solid rgba(216, 64, 64, 0.35);
+        border-radius: 4px;
+        padding: 0.1rem 0.35rem;
+        margin-top: 0.2rem;
+      }
+      .map-directions-btn {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.65rem 1rem;
+        background: linear-gradient(135deg, #d84040, #a02828);
+        color: #fff;
+        border-radius: var(--radius-sm);
+        font-family: var(--font-heading);
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .map-directions-btn:hover { opacity: 0.85; }
+      .map-iframe-wrap {
+        position: relative;
+      }
+      .map-iframe-wrap iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        border: none;
+      }
+      @media (max-width: 768px) {
+        .map-split { grid-template-columns: 1fr; }
+        .map-iframe-wrap iframe { min-height: 280px; }
+        .map-info-panel { padding: 1.25rem; }
+      }
 
-    /* Contact form */
-    .contact-form {
-      padding: 2rem;
-    }
-    .form-title {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-    }
-    .form-group {
-      margin-bottom: 1.1rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 0.4rem;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: var(--radius-sm);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 0.93rem;
-      transition: border-color 0.2s ease, background 0.2s ease;
-      outline: none;
-      -webkit-appearance: none;
-    }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--text-dim); }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: rgba(216,64,64,0.50);
-      background: rgba(216,64,64,0.04);
-    }
-    .form-group select { cursor: pointer; }
-    .form-group select option { background: var(--black); color: var(--text); }
-    .form-group textarea { height: 110px; resize: none; }
+      /* Contact form */
+      .contact-form {
+        padding: 2rem;
+      }
+      .form-title {
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+      .form-group {
+        margin-bottom: 1.1rem;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.78rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--radius-sm);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 0.93rem;
+        transition:
+          border-color 0.2s ease,
+          background 0.2s ease;
+        outline: none;
+        -webkit-appearance: none;
+      }
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--text-dim);
+      }
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        border-color: rgba(216, 64, 64, 0.5);
+        background: rgba(216, 64, 64, 0.04);
+      }
+      .form-group select {
+        cursor: pointer;
+      }
+      .form-group select option {
+        background: var(--black);
+        color: var(--text);
+      }
+      .form-group textarea {
+        height: 110px;
+        resize: none;
+      }
 
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
 
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 1.5rem;
-      background: rgba(37,211,102,0.08);
-      border: 1px solid rgba(37,211,102,0.25);
-      border-radius: var(--radius-sm);
-      margin-top: 1rem;
-      color: #25D366;
-      font-family: var(--font-heading);
-      font-weight: 600;
-    }
-    .form-success i { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+      .form-success {
+        display: none;
+        text-align: center;
+        padding: 1.5rem;
+        background: rgba(37, 211, 102, 0.08);
+        border: 1px solid rgba(37, 211, 102, 0.25);
+        border-radius: var(--radius-sm);
+        margin-top: 1rem;
+        color: #25d366;
+        font-family: var(--font-heading);
+        font-weight: 600;
+      }
+      .form-success i {
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
 
-    /* ============================================================
+      /* ============================================================
        11. FOOTER
     ============================================================ */
-    #footer {
-      background: #1A1010;
-      border-top: 1px solid rgba(193,57,90,0.15);
-      padding: 3rem 0 2rem;
-    }
+      #footer {
+        background: #1a1010;
+        border-top: 1px solid rgba(193, 57, 90, 0.15);
+        padding: 3rem 0 2rem;
+      }
 
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
 
-    .footer-logo {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 1.6rem;
-      letter-spacing: 0.06em;
-    }
-    .footer-tagline {
-      font-size: 0.8rem;
-      color: var(--text-dim);
-      margin-top: 0.3rem;
-      letter-spacing: 0.08em;
-    }
+      .footer-logo {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 1.6rem;
+        letter-spacing: 0.06em;
+      }
+      .footer-tagline {
+        font-size: 0.8rem;
+        color: var(--text-dim);
+        margin-top: 0.3rem;
+        letter-spacing: 0.08em;
+      }
 
-    .footer-links {
-      display: flex;
-      gap: 1.75rem;
-      list-style: none;
-    }
-    .footer-links a {
-      font-family: var(--font-heading);
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      transition: color 0.2s ease;
-    }
-    .footer-links a:hover { color: var(--gold); }
+      .footer-links {
+        display: flex;
+        gap: 1.75rem;
+        list-style: none;
+      }
+      .footer-links a {
+        font-family: var(--font-heading);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+      }
+      .footer-links a:hover {
+        color: var(--gold);
+      }
 
-    .footer-socials {
-      display: flex;
-      gap: 0.85rem;
-    }
+      .footer-socials {
+        display: flex;
+        gap: 0.85rem;
+      }
 
-    .footer-bottom {
-      text-align: center;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      font-size: 0.8rem;
-      color: var(--text-dim);
-    }
-    .footer-bottom a { color: var(--gold); }
+      .footer-bottom {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        font-size: 0.8rem;
+        color: var(--text-dim);
+      }
+      .footer-bottom a {
+        color: var(--gold);
+      }
 
-    /* ============================================================
+      /* ============================================================
        12. FLOATING WHATSAPP BUTTON
     ============================================================ */
-    .floating-wa {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 900;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.6rem;
-      color: #fff;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      animation: wa-pulse 3s ease-in-out infinite;
-    }
-    .floating-wa:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 28px rgba(37,211,102,0.7);
-    }
-    @keyframes wa-pulse {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.5); }
-      50%       { box-shadow: 0 4px 30px rgba(37,211,102,0.8), 0 0 0 10px rgba(37,211,102,0.08); }
-    }
+      .floating-wa {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 900;
+        width: 58px;
+        height: 58px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25d366, #128c7e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        animation: wa-pulse 3s ease-in-out infinite;
+      }
+      .floating-wa:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 28px rgba(37, 211, 102, 0.7);
+      }
+      @keyframes wa-pulse {
+        0%,
+        100% {
+          box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+        }
+        50% {
+          box-shadow:
+            0 4px 30px rgba(37, 211, 102, 0.8),
+            0 0 0 10px rgba(37, 211, 102, 0.08);
+        }
+      }
 
-    /* ============================================================
+      /* ============================================================
        13. BRAND LOGOS GRID
     ============================================================ */
-    .brands-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.25rem;
-      margin-top: 1rem;
-    }
+      .brands-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+        margin-top: 1rem;
+      }
 
-    .brand-tile {
-      --i: 0;
-      animation: brand-float calc(3s + var(--i) * 0.4s) ease-in-out infinite alternate;
-      animation-delay: calc(var(--i) * 0.15s);
-    }
-    @keyframes brand-float {
-      from { transform: translateY(0px) rotate(-1deg); }
-      to   { transform: translateY(-10px) rotate(1deg); }
-    }
+      .brand-tile {
+        --i: 0;
+        animation: brand-float calc(3s + var(--i) * 0.4s) ease-in-out infinite
+          alternate;
+        animation-delay: calc(var(--i) * 0.15s);
+      }
+      @keyframes brand-float {
+        from {
+          transform: translateY(0px) rotate(-1deg);
+        }
+        to {
+          transform: translateY(-10px) rotate(1deg);
+        }
+      }
 
-    .brand-tile-inner {
-      position: relative;
-      padding: 1.75rem 1.25rem 1.5rem;
-      background: rgba(30,10,10,0.70);
-      border: 1px solid rgba(216,64,64,0.18);
-      border-radius: var(--radius);
-      text-align: center;
-      cursor: default;
-      overflow: hidden;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-      backdrop-filter: blur(10px);
-    }
-    .brand-tile-inner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #D84040, transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .brand-tile:hover .brand-tile-inner {
-      border-color: rgba(216,64,64,0.50);
-      box-shadow: 0 12px 40px rgba(216,64,64,0.15), 0 0 0 1px rgba(216,64,64,0.10);
-      background: rgba(50,15,15,0.80);
-    }
-    .brand-tile:hover .brand-tile-inner::before { opacity: 1; }
+      .brand-tile-inner {
+        position: relative;
+        padding: 1.75rem 1.25rem 1.5rem;
+        background: rgba(30, 10, 10, 0.7);
+        border: 1px solid rgba(216, 64, 64, 0.18);
+        border-radius: var(--radius);
+        text-align: center;
+        cursor: default;
+        overflow: hidden;
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          background 0.3s ease;
+        backdrop-filter: blur(10px);
+      }
+      .brand-tile-inner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #d84040, transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .brand-tile:hover .brand-tile-inner {
+        border-color: rgba(216, 64, 64, 0.5);
+        box-shadow:
+          0 12px 40px rgba(216, 64, 64, 0.15),
+          0 0 0 1px rgba(216, 64, 64, 0.1);
+        background: rgba(50, 15, 15, 0.8);
+      }
+      .brand-tile:hover .brand-tile-inner::before {
+        opacity: 1;
+      }
 
-    /* Puzzle-flip effect on hover */
-    .brand-tile-inner {
-      transform-style: preserve-3d;
-      transition: transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    }
-    .brand-tile:hover .brand-tile-inner {
-      transform: perspective(600px) rotateY(6deg) rotateX(-3deg) scale(1.04);
-    }
+      /* Puzzle-flip effect on hover */
+      .brand-tile-inner {
+        transform-style: preserve-3d;
+        transition:
+          transform 0.5s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          background 0.3s ease;
+      }
+      .brand-tile:hover .brand-tile-inner {
+        transform: perspective(600px) rotateY(6deg) rotateX(-3deg) scale(1.04);
+      }
 
-    .brand-img {
-      width: 120px;
-      height: 70px;
-      object-fit: contain;
-      margin: 0 auto 1rem;
-      display: block;
-      opacity: 1;
-      transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
-    }
-    .brand-tile:hover .brand-img {
-      opacity: 1;
-      transform: scale(1.08);
-      filter: drop-shadow(0 0 10px rgba(216,64,64,0.45));
-    }
-    .brand-text-logo {
-      font-family: var(--font-heading);
-      font-weight: 900;
-      font-size: 1.8rem;
-      letter-spacing: 0.08em;
-      color: rgba(238,238,238,0.75);
-      text-align: center;
-      margin-bottom: 1rem;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-    .brand-tile:hover .brand-text-logo {
-      color: #EEEEEE;
-      text-shadow: 0 0 12px rgba(216,64,64,0.6);
-    }
+      .brand-img {
+        width: 120px;
+        height: 70px;
+        object-fit: contain;
+        margin: 0 auto 1rem;
+        display: block;
+        opacity: 1;
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease,
+          filter 0.3s ease;
+      }
+      .brand-tile:hover .brand-img {
+        opacity: 1;
+        transform: scale(1.08);
+        filter: drop-shadow(0 0 10px rgba(216, 64, 64, 0.45));
+      }
+      .brand-text-logo {
+        font-family: var(--font-heading);
+        font-weight: 900;
+        font-size: 1.8rem;
+        letter-spacing: 0.08em;
+        color: rgba(238, 238, 238, 0.75);
+        text-align: center;
+        margin-bottom: 1rem;
+        transition:
+          color 0.3s ease,
+          text-shadow 0.3s ease;
+      }
+      .brand-tile:hover .brand-text-logo {
+        color: #eeeeee;
+        text-shadow: 0 0 12px rgba(216, 64, 64, 0.6);
+      }
 
-    .brand-name {
-      font-family: var(--font-heading);
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.04em;
-    }
-    .brand-models {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      letter-spacing: 0.06em;
-    }
+      .brand-name {
+        font-family: var(--font-heading);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.04em;
+      }
+      .brand-models {
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        letter-spacing: 0.06em;
+      }
 
-    /* Shimmer scan line animation */
-    .brand-tile-inner::after {
-      content: '';
-      position: absolute;
-      top: -100%;
-      left: 0; right: 0;
-      height: 60%;
-      background: linear-gradient(to bottom, transparent, rgba(216,64,64,0.05), transparent);
-      transition: top 0.6s ease;
-    }
-    .brand-tile:hover .brand-tile-inner::after { top: 100%; }
+      /* Shimmer scan line animation */
+      .brand-tile-inner::after {
+        content: "";
+        position: absolute;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          rgba(216, 64, 64, 0.05),
+          transparent
+        );
+        transition: top 0.6s ease;
+      }
+      .brand-tile:hover .brand-tile-inner::after {
+        top: 100%;
+      }
 
-    /* ============================================================
+      /* ============================================================
        14. THREE.JS CANVAS
     ============================================================ */
-    #threejs-canvas {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-    }
+      #threejs-canvas {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-    /* ============================================================
+      /* ============================================================
        14B. FINANCE SECTION
     ============================================================ */
-    #finance {
-      background: #0E0808;
-    }
+      #finance {
+        background: #0e0808;
+      }
 
-    .finance-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-    }
+      .finance-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+      }
 
-    .finance-card {
-      padding: 1.75rem 1.5rem;
-      background: rgba(30,10,10,0.65);
-      border: 1px solid rgba(216,64,64,0.20);
-      border-radius: var(--radius);
-      backdrop-filter: blur(10px);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .finance-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(216,64,64,0.5), transparent);
-    }
-    .finance-card:hover {
-      border-color: rgba(216,64,64,0.50);
-      box-shadow: 0 12px 40px rgba(216,64,64,0.12);
-      transform: translateY(-5px);
-    }
+      .finance-card {
+        padding: 1.75rem 1.5rem;
+        background: rgba(30, 10, 10, 0.65);
+        border: 1px solid rgba(216, 64, 64, 0.2);
+        border-radius: var(--radius);
+        backdrop-filter: blur(10px);
+        transition:
+          border-color 0.3s ease,
+          box-shadow 0.3s ease,
+          transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .finance-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(216, 64, 64, 0.5),
+          transparent
+        );
+      }
+      .finance-card:hover {
+        border-color: rgba(216, 64, 64, 0.5);
+        box-shadow: 0 12px 40px rgba(216, 64, 64, 0.12);
+        transform: translateY(-5px);
+      }
 
-    .finance-logo-wrap {
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1rem;
-      background: rgba(255,255,255,0.06);
-      border-radius: 8px;
-      padding: 0.5rem;
-    }
-    .finance-logo-text {
-      text-align: center;
-      line-height: 1.2;
-    }
-    .finance-name {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.85rem;
-    }
-    .finance-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-    .finance-features li {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .finance-features li i {
-      color: #D84040;
-      font-size: 0.7rem;
-      flex-shrink: 0;
-    }
+      .finance-logo-wrap {
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        padding: 0.5rem;
+      }
+      .finance-logo-text {
+        text-align: center;
+        line-height: 1.2;
+      }
+      .finance-name {
+        font-family: var(--font-heading);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.85rem;
+      }
+      .finance-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+      }
+      .finance-features li {
+        font-size: 0.82rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .finance-features li i {
+        color: #d84040;
+        font-size: 0.7rem;
+        flex-shrink: 0;
+      }
 
-    .finance-card-cta {
-      border-color: rgba(216,64,64,0.35);
-      background: rgba(216,64,64,0.06);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-    }
-    .finance-cta-icon {
-      font-size: 2.5rem;
-      color: rgba(216,64,64,0.60);
-      margin-bottom: 0.75rem;
-    }
-    .finance-cta-text {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
+      .finance-card-cta {
+        border-color: rgba(216, 64, 64, 0.35);
+        background: rgba(216, 64, 64, 0.06);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+      }
+      .finance-cta-icon {
+        font-size: 2.5rem;
+        color: rgba(216, 64, 64, 0.6);
+        margin-bottom: 0.75rem;
+      }
+      .finance-cta-text {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
 
-    .finance-note {
-      margin-top: 2rem;
-      padding: 1rem 1.5rem;
-      background: rgba(216,64,64,0.06);
-      border: 1px solid rgba(216,64,64,0.18);
-      border-radius: var(--radius-sm);
-      text-align: center;
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
-    .finance-note i { color: #D84040; margin-right: 0.4rem; }
-    .finance-note strong { color: var(--text); }
+      .finance-note {
+        margin-top: 2rem;
+        padding: 1rem 1.5rem;
+        background: rgba(216, 64, 64, 0.06);
+        border: 1px solid rgba(216, 64, 64, 0.18);
+        border-radius: var(--radius-sm);
+        text-align: center;
+        font-size: 0.83rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+      .finance-note i {
+        color: #d84040;
+        margin-right: 0.4rem;
+      }
+      .finance-note strong {
+        color: var(--text);
+      }
 
-    /* ============================================================
+      .finance-logo-img {
+        max-height: 40px;
+        max-width: 130px;
+        object-fit: contain;
+      }
+
+      /* EMI Calculator */
+      .emi-calc {
+        margin-top: 2.5rem;
+        padding: 2rem;
+        background: rgba(30, 10, 10, 0.7);
+        border: 1px solid rgba(216, 64, 64, 0.25);
+        border-radius: var(--radius);
+        backdrop-filter: blur(12px);
+      }
+      .emi-calc-title {
+        font-family: var(--font-heading);
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+      .emi-calc-title i {
+        color: #d84040;
+      }
+      .emi-calc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr auto;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      .emi-input-group label {
+        display: block;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+        margin-bottom: 0.4rem;
+        font-family: var(--font-body);
+      }
+      .emi-input-group input[type="range"] {
+        width: 100%;
+        accent-color: #d84040;
+        height: 4px;
+        cursor: pointer;
+      }
+      .emi-val {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 700;
+        color: #d84040;
+        margin-top: 0.3rem;
+      }
+      .emi-result-wrap {
+        background: rgba(216, 64, 64, 0.08);
+        border: 1px solid rgba(216, 64, 64, 0.3);
+        border-radius: var(--radius-sm);
+        padding: 1rem 1.25rem;
+        text-align: center;
+        min-width: 160px;
+      }
+      .emi-result-label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 0.3rem;
+      }
+      .emi-result {
+        font-family: var(--font-display);
+        font-size: 1.6rem;
+        font-weight: 900;
+        color: #d84040;
+      }
+      .emi-breakdown {
+        font-size: 0.72rem;
+        color: var(--text-dim);
+        margin-top: 0.5rem;
+        line-height: 1.7;
+      }
+      .emi-breakdown strong {
+        color: var(--text-muted);
+      }
+      .emi-tc {
+        margin-top: 1.25rem;
+        font-size: 0.75rem;
+        color: var(--text-dim);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .emi-tc i {
+        color: #d84040;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      @media (max-width: 1024px) {
+        .emi-calc-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 600px) {
+        .emi-calc-grid {
+          grid-template-columns: 1fr;
+        }
+        .emi-calc {
+          padding: 1.25rem;
+        }
+      }
+
+      /* ============================================================
        15. MEDIA QUERIES — FULLY MOBILE FRIENDLY
     ============================================================ */
 
-    /* Tablet */
-    @media (max-width: 1024px) {
-      .grid-4         { grid-template-columns: repeat(2, 1fr); }
-      .stats-grid     { grid-template-columns: repeat(2, 1fr); }
-      .about-grid     { grid-template-columns: 1fr; gap: 2.5rem; }
-      .brands-grid    { grid-template-columns: repeat(3, 1fr); }
-      .finance-grid   { grid-template-columns: repeat(2, 1fr); }
-      .contact-cards  { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    /* Mobile landscape / large phone */
-    @media (max-width: 768px) {
-      :root { --section-gap: 60px; }
-
-      /* Navbar */
-      .hamburger { display: flex; }
-      #nav-links {
-        position: fixed;
-        top: 0; right: -100%;
-        width: 75vw; max-width: 300px;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
-        background: rgba(18,3,9,0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border-left: 1px solid rgba(216,64,64,0.20);
-        transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
-        z-index: 999;
-        padding: 2rem;
+      /* Tablet */
+      @media (max-width: 1024px) {
+        .grid-4 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 2.5rem;
+        }
+        .brands-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .finance-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-      #nav-links.open { right: 0; }
-      #nav-links li { width: 100%; }
-      #nav-links a {
-        font-size: 1rem;
-        padding: 0.5rem 0;
-        display: block;
-        border-bottom: 1px solid rgba(255,255,255,0.06);
+
+      /* Mobile landscape / large phone */
+      @media (max-width: 768px) {
+        :root {
+          --section-gap: 60px;
+        }
+
+        /* Navbar */
+        .hamburger {
+          display: flex;
+        }
+        #nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 75vw;
+          max-width: 300px;
+          height: 100vh;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.5rem;
+          background: rgba(18, 3, 9, 0.98);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border-left: 1px solid rgba(216, 64, 64, 0.2);
+          transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 999;
+          padding: 2rem;
+        }
+        #nav-links.open {
+          right: 0;
+        }
+        #nav-links li {
+          width: 100%;
+        }
+        #nav-links a {
+          font-size: 1rem;
+          padding: 0.5rem 0;
+          display: block;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        #nav-links .btn {
+          width: 100%;
+          justify-content: center;
+          margin-top: 0.5rem;
+        }
+
+        /* Hero */
+        .hero-headline {
+          font-size: clamp(2.2rem, 9vw, 3.5rem);
+        }
+        .hero-stats {
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+        .hero-stat-divider {
+          display: none;
+        }
+        .hero-ctas {
+          flex-direction: column;
+        }
+        .hero-ctas .btn {
+          width: 100%;
+          justify-content: center;
+        }
+
+        /* Grids */
+        .grid-3 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .brands-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.9rem;
+        }
+        .finance-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .contact-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* About visual */
+        .about-visual-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Footer */
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1.25rem;
+        }
+        .footer-links {
+          flex-wrap: wrap;
+          gap: 0.75rem;
+        }
+
+        /* Section title */
+        .section-title {
+          font-size: 1.8rem;
+        }
+        .section-sub {
+          font-size: 0.9rem;
+        }
       }
-      #nav-links .btn { width: 100%; justify-content: center; margin-top: 0.5rem; }
 
-      /* Hero */
-      .hero-headline { font-size: clamp(2.2rem, 9vw, 3.5rem); }
-      .hero-stats { flex-wrap: wrap; gap: 1rem; }
-      .hero-stat-divider { display: none; }
-      .hero-ctas { flex-direction: column; }
-      .hero-ctas .btn { width: 100%; justify-content: center; }
+      /* Mobile portrait */
+      @media (max-width: 480px) {
+        :root {
+          --section-gap: 50px;
+        }
 
-      /* Grids */
-      .grid-3         { grid-template-columns: repeat(2, 1fr); }
-      .grid-2         { grid-template-columns: 1fr; }
-      .features-grid  { grid-template-columns: 1fr; }
-      .brands-grid    { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
-      .finance-grid   { grid-template-columns: repeat(2, 1fr); }
-      .contact-cards  { grid-template-columns: repeat(2, 1fr); }
+        #navbar {
+          padding: 0.9rem 1rem;
+        }
+        #navbar.scrolled {
+          padding: 0.65rem 1rem;
+        }
+        .nav-logo {
+          font-size: 1.2rem;
+        }
+        .nav-logo-img {
+          width: 34px;
+          height: 34px;
+        }
 
-      /* About visual */
-      .about-visual-stats { grid-template-columns: repeat(2, 1fr); }
+        .hero-headline {
+          font-size: clamp(1.9rem, 10vw, 2.8rem);
+        }
+        .hero-sub {
+          font-size: 0.9rem;
+        }
+        .hero-stats {
+          gap: 0.75rem;
+        }
+        .hero-stat-num {
+          font-size: 1.4rem;
+        }
+        .scroll-indicator {
+          display: none;
+        }
 
-      /* Footer */
-      .footer-inner   { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
-      .footer-links   { flex-wrap: wrap; gap: 0.75rem; }
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .brands-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.75rem;
+        }
+        .finance-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
 
-      /* Section title */
-      .section-title  { font-size: 1.8rem; }
-      .section-sub    { font-size: 0.9rem; }
-    }
+        /* Brand tiles smaller on mobile */
+        .brand-tile-inner {
+          padding: 1.25rem 0.75rem 1rem;
+        }
+        .brand-img {
+          width: 80px;
+          height: 50px;
+        }
+        .brand-name {
+          font-size: 0.85rem;
+        }
+        .brand-models {
+          font-size: 0.65rem;
+        }
+        .brand-text-logo {
+          font-size: 1.3rem;
+        }
 
-    /* Mobile portrait */
-    @media (max-width: 480px) {
-      :root { --section-gap: 50px; }
+        /* Section tag centered on mobile */
+        .section-tag {
+          justify-content: center;
+        }
+        .section-tag::before,
+        .section-tag::after {
+          display: none;
+        }
 
-      #navbar { padding: 0.9rem 1rem; }
-      #navbar.scrolled { padding: 0.65rem 1rem; }
-      .nav-logo { font-size: 1.2rem; }
-      .nav-logo-img { width: 34px; height: 34px; }
+        .about-visual-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .about-big-icon {
+          font-size: 4rem;
+          margin-bottom: 1.5rem;
+        }
 
-      .hero-headline { font-size: clamp(1.9rem, 10vw, 2.8rem); }
-      .hero-sub { font-size: 0.9rem; }
-      .hero-stats { gap: 0.75rem; }
-      .hero-stat-num { font-size: 1.4rem; }
-      .scroll-indicator { display: none; }
+        .service-card {
+          padding: 1.5rem;
+        }
 
-      .grid-3         { grid-template-columns: 1fr; }
-      .stats-grid     { grid-template-columns: repeat(2, 1fr); }
-      .brands-grid    { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-      .finance-grid   { grid-template-columns: 1fr; }
-      .contact-cards  { grid-template-columns: repeat(2, 1fr); }
+        .map-iframe-wrap iframe {
+          min-height: 240px;
+        }
 
-      /* Brand tiles smaller on mobile */
-      .brand-tile-inner { padding: 1.25rem 0.75rem 1rem; }
-      .brand-img        { width: 80px; height: 50px; }
-      .brand-name       { font-size: 0.85rem; }
-      .brand-models     { font-size: 0.65rem; }
-      .brand-text-logo  { font-size: 1.3rem; }
+        .finance-note {
+          font-size: 0.75rem;
+          padding: 0.85rem 1rem;
+        }
 
-      /* Section tag centered on mobile */
-      .section-tag { justify-content: center; }
-      .section-tag::before, .section-tag::after { display: none; }
+        .footer-links {
+          display: none;
+        }
+        .footer-bottom {
+          font-size: 0.72rem;
+        }
 
-      .about-visual-stats { grid-template-columns: repeat(2, 1fr); }
-      .about-big-icon { font-size: 4rem; margin-bottom: 1.5rem; }
+        .floating-wa {
+          width: 50px;
+          height: 50px;
+          font-size: 1.35rem;
+          bottom: 1.25rem;
+          right: 1.25rem;
+        }
+      }
 
-      .service-card { padding: 1.5rem; }
-
-      .map-wrap iframe { height: 240px; }
-
-      .finance-note { font-size: 0.75rem; padding: 0.85rem 1rem; }
-
-      .footer-links { display: none; }
-      .footer-bottom { font-size: 0.72rem; }
-
-      .floating-wa { width: 50px; height: 50px; font-size: 1.35rem; bottom: 1.25rem; right: 1.25rem; }
-    }
-
-    /* Very small screens */
-    @media (max-width: 360px) {
-      .brands-grid  { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
-      .contact-cards { grid-template-columns: 1fr; }
-      .hero-headline { font-size: 1.7rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ============================================================
+      /* Very small screens */
+      @media (max-width: 360px) {
+        .brands-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5rem;
+        }
+        .contact-cards {
+          grid-template-columns: 1fr;
+        }
+        .hero-headline {
+          font-size: 1.7rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================
        NAVBAR
   ============================================================ -->
-  <nav id="navbar">
-    <a href="#hero" class="nav-logo">
-      <img src="logo.jpg" alt="SK Cars" class="nav-logo-img">
-      <span class="logo-sk">SK</span><span class="logo-cars">CARS</span>
-    </a>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#cars">Brands</a></li>
-      <li><a href="#finance">Finance</a></li>
-      <li><a href="#why-us">Why Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li>
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20buying%20a%20car"
-           target="_blank" rel="noopener"
-           class="btn btn-gold" style="padding:0.55rem 1.25rem;">
-          <i class="fab fa-whatsapp"></i> Get Quote
-        </a>
-      </li>
-    </ul>
-    <div class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </div>
-  </nav>
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <img src="sk logo-transparent.png" alt="SK Cars" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#cars">Brands</a></li>
+        <li><a href="#finance">Finance</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a
+            href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20buying%20a%20car"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold"
+            style="padding: 0.55rem 1.25rem"
+          >
+            <i class="fab fa-whatsapp"></i> Get Quote
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
 
-  <!-- ============================================================
+    <!-- ============================================================
        HERO
   ============================================================ -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-fade"></div>
-    <div id="threejs-canvas"></div>
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-fade"></div>
+      <div id="threejs-canvas"></div>
 
-    <div class="container hero-content">
-      <div class="hero-tag">
-        <i class="fas fa-circle"></i>
-        Tirunelveli's Trusted Car Dealer
-      </div>
-      <h1 class="hero-headline">
-        <span class="hero-line-1">Drive Your</span>
-        <span class="hero-line-2">Dream Car</span>
-      </h1>
-      <p class="hero-sub">Premium second-hand cars in Tirunelveli. Quality inspected, fairly priced, and ready to drive home today.</p>
-      <div class="hero-ctas">
-        <a href="#cars" class="btn btn-gold">
-          <i class="fas fa-car"></i> Browse Cars
-        </a>
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
-           target="_blank" rel="noopener"
-           class="btn btn-whatsapp">
-          <i class="fab fa-whatsapp"></i> WhatsApp Us
-        </a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="hero-stat-num">500+</div>
-          <div class="hero-stat-label">Cars Sold</div>
+      <div class="container hero-content">
+        <div class="hero-tag">
+          <i class="fas fa-circle"></i>
+          Tirunelveli's Trusted Car Dealer
         </div>
-        <div class="hero-stat-divider"></div>
-        <div>
-          <div class="hero-stat-num">4.1★</div>
-          <div class="hero-stat-label">Rated on Justdial</div>
+        <h1 class="hero-headline">
+          <span class="hero-line-1">Drive Your</span>
+          <span class="hero-line-2">Dream Car</span>
+        </h1>
+        <p class="hero-sub">
+          Premium second-hand cars in Tirunelveli. Quality inspected, fairly
+          priced, and ready to drive home today.
+        </p>
+        <div class="hero-ctas">
+          <a href="#cars" class="btn btn-gold">
+            <i class="fas fa-car"></i> Browse Cars
+          </a>
+          <a
+            href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-whatsapp"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp Us
+          </a>
         </div>
-        <div class="hero-stat-divider"></div>
-        <div>
-          <div class="hero-stat-num">1000+</div>
-          <div class="hero-stat-label">Happy Customers</div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">3000+</div>
+            <div class="hero-stat-label">Cars Sold</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <div class="hero-stat-num">4.1★</div>
+            <div class="hero-stat-label">Rated on Justdial</div>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div>
+            <div class="hero-stat-num">5000+</div>
+            <div class="hero-stat-label">Happy Customers</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="scroll-indicator">
-      <span>Scroll</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </section>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        ABOUT
   ============================================================ -->
-  <section id="about" class="section-pad">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <div class="section-tag">About SK Cars</div>
-          <h2 class="section-title">Your Trusted Partner for <span>Quality Used Cars</span></h2>
-          <p>SK Cars is Tirunelveli's premier destination for quality pre-owned vehicles. We believe buying a used car should be simple, transparent, and stress-free — and that's exactly what we deliver.</p>
-          <p>Every vehicle in our inventory is thoroughly inspected, documented, and priced fairly. We handle everything from RC transfer to loan assistance, so you can drive away with confidence.</p>
+    <section id="about" class="section-pad">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <div class="section-tag">About SK Cars</div>
+            <h2 class="section-title">
+              Your Trusted Partner for <span>Quality Used Cars</span>
+            </h2>
+            <p>
+              SK Cars is Tirunelveli's premier destination for quality pre-owned
+              vehicles. We believe buying a used car should be simple,
+              transparent, and stress-free — and that's exactly what we deliver.
+            </p>
+            <p>
+              Every vehicle in our inventory is thoroughly inspected,
+              documented, and priced fairly. We handle everything from RC
+              transfer to loan assistance, so you can drive away with
+              confidence.
+            </p>
 
-          <div class="about-mini-stats">
-            <div class="about-stat"><i class="fas fa-calendar-check"></i> Est. 2018</div>
-            <div class="about-stat"><i class="fas fa-car"></i> 500+ Cars Sold</div>
-            <div class="about-stat"><i class="fas fa-users"></i> 1000+ Customers</div>
-          </div>
+            <div class="about-mini-stats">
+              <div class="about-stat">
+                <i class="fas fa-calendar-check"></i> Est. 2018
+              </div>
+              <div class="about-stat">
+                <i class="fas fa-car"></i> 3000+ Cars Sold
+              </div>
+              <div class="about-stat">
+                <i class="fas fa-users"></i> 5000+ Customers
+              </div>
+            </div>
 
-          <div class="rating-badge">
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            4.1 / 5 on Justdial
-          </div>
+            <div class="rating-badge">
+              <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              4.1 / 5 on Justdial
+            </div>
 
-          <div class="about-address">
-            <i class="fas fa-location-dot"></i>
-            <div>
-              No. 7C Balaji Avenue, 2nd Cross Street,<br>
-              Tachanallur, Tirunelveli — 627358<br>
-              <span style="color:var(--gold);font-size:0.85rem;">(Near Railway Gate)</span>
+            <div class="about-address">
+              <i class="fas fa-location-dot"></i>
+              <div>
+                No. 7C Balaji Avenue, 2nd Cross Street,<br />
+                Tachanallur, Tirunelveli — 627358<br />
+                <span style="color: var(--gold); font-size: 0.85rem"
+                  >(Near Railway Gate)</span
+                >
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="about-visual reveal" style="transition-delay:0.2s;">
-          <div class="about-visual-inner">
-            <div class="about-big-icon"><i class="fas fa-car"></i></div>
-            <div class="about-visual-stats">
-              <div class="about-vis-stat">
-                <div class="about-vis-num">10+</div>
-                <div class="about-vis-label">Years</div>
-              </div>
-              <div class="about-vis-stat">
-                <div class="about-vis-num">500+</div>
-                <div class="about-vis-label">Cars Sold</div>
-              </div>
-              <div class="about-vis-stat">
-                <div class="about-vis-num">1000+</div>
-                <div class="about-vis-label">Customers</div>
-              </div>
-              <div class="about-vis-stat">
-                <div class="about-vis-num">4.1★</div>
-                <div class="about-vis-label">Rating</div>
+          <div class="about-visual reveal" style="transition-delay: 0.2s">
+            <div class="about-visual-inner">
+              <div class="about-big-icon"><i class="fas fa-car"></i></div>
+              <div class="about-visual-stats">
+                <div class="about-vis-stat">
+                  <div class="about-vis-num">10+</div>
+                  <div class="about-vis-label">Years</div>
+                </div>
+                <div class="about-vis-stat">
+                  <div class="about-vis-num">3000+</div>
+                  <div class="about-vis-label">Cars Sold</div>
+                </div>
+                <div class="about-vis-stat">
+                  <div class="about-vis-num">5000+</div>
+                  <div class="about-vis-label">Customers</div>
+                </div>
+                <div class="about-vis-stat">
+                  <div class="about-vis-num">4.1★</div>
+                  <div class="about-vis-label">Rating</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        SERVICES
   ============================================================ -->
-  <section id="services" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">What We Offer</div>
-        <h2 class="section-title">Our <span>Services</span></h2>
-        <p class="section-sub">From buying to selling, we've got every step of your car journey covered.</p>
-      </div>
+    <section id="services" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">What We Offer</div>
+          <h2 class="section-title">Our <span>Services</span></h2>
+          <p class="section-sub">
+            From buying to selling, we've got every step of your car journey
+            covered.
+          </p>
+        </div>
 
-      <div class="grid-2 reveal-stagger">
-        <div class="glass-gold service-card">
-          <div class="service-icon"><i class="fas fa-car"></i></div>
-          <div class="service-title">Buy a Car</div>
-          <p class="service-desc">Browse our wide range of verified pre-owned vehicles. Every car comes with a thorough inspection report, service history, and fair market pricing — no hidden surprises.</p>
-        </div>
-        <div class="glass-gold service-card">
-          <div class="service-icon"><i class="fas fa-hand-holding-dollar"></i></div>
-          <div class="service-title">Sell Your Car</div>
-          <p class="service-desc">Get the best market price for your vehicle. We offer instant evaluation, quick paperwork, and same-day payment. Selling has never been this easy.</p>
-        </div>
-        <div class="glass-gold service-card">
-          <div class="service-icon"><i class="fas fa-arrows-rotate"></i></div>
-          <div class="service-title">Car Exchange</div>
-          <p class="service-desc">Upgrade your existing vehicle with a hassle-free exchange. Get a fair valuation on your current car and apply it toward the purchase of your new one.</p>
-        </div>
-        <div class="glass-gold service-card">
-          <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
-          <div class="service-title">Quality Inspection</div>
-          <p class="service-desc">Every car undergoes a comprehensive multi-point quality check covering engine, transmission, electricals, and bodywork before it enters our showroom.</p>
+        <div class="grid-2 reveal-stagger">
+          <div class="glass-gold service-card">
+            <div class="service-icon"><i class="fas fa-car"></i></div>
+            <div class="service-title">Buy a Car</div>
+            <p class="service-desc">
+              Browse our wide range of verified pre-owned vehicles. Every car
+              comes with a thorough inspection report, service history, and fair
+              market pricing — no hidden surprises.
+            </p>
+          </div>
+          <div class="glass-gold service-card">
+            <div class="service-icon">
+              <i class="fas fa-hand-holding-dollar"></i>
+            </div>
+            <div class="service-title">Sell Your Car</div>
+            <p class="service-desc">
+              Get the best market price for your vehicle. We offer instant
+              evaluation, quick paperwork, and same-day payment. Selling has
+              never been this easy.
+            </p>
+          </div>
+          <div class="glass-gold service-card">
+            <div class="service-icon"><i class="fas fa-arrows-rotate"></i></div>
+            <div class="service-title">Car Exchange</div>
+            <p class="service-desc">
+              Upgrade your existing vehicle with a hassle-free exchange. Get a
+              fair valuation on your current car and apply it toward the
+              purchase of your new one.
+            </p>
+          </div>
+          <div class="glass-gold service-card">
+            <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="service-title">Quality Inspection</div>
+            <p class="service-desc">
+              Every car undergoes a comprehensive multi-point quality check
+              covering engine, transmission, electricals, and bodywork before it
+              enters our showroom.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
+    <!-- ============================================================
        BRANDS WE DEAL IN
   ============================================================ -->
-  <section id="cars" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">Brands We Deal In</div>
-        <h2 class="section-title">Popular <span>Car Brands</span></h2>
-        <p class="section-sub">We deal in all major brands trusted across Tamil Nadu. Call us for current stock.</p>
+    <section id="cars" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Brands We Deal In</div>
+          <h2 class="section-title">Popular <span>Car Brands</span></h2>
+          <p class="section-sub">
+            We deal in all major brands trusted across Tamil Nadu. Call us for
+            current stock.
+          </p>
+        </div>
+
+        <div class="brands-grid" id="brands-grid">
+          <div class="brand-tile" style="--i: 0">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/toyota.png"
+                alt="Toyota"
+                class="brand-img"
+              />
+              <div class="brand-name">Toyota</div>
+              <div class="brand-models">Innova · Innova Crysta</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 1">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/suzuki.png"
+                alt="Maruti Suzuki"
+                class="brand-img"
+              />
+              <div class="brand-name">Maruti Suzuki</div>
+              <div class="brand-models">Swift · Dzire · Alto</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 2">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/mahindra.png"
+                alt="Mahindra"
+                class="brand-img"
+              />
+              <div class="brand-name">Mahindra</div>
+              <div class="brand-models">Bolero · Scorpio · XUV</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 3">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/kia.png"
+                alt="KIA"
+                class="brand-img"
+              />
+              <div class="brand-name">KIA</div>
+              <div class="brand-models">Seltos · Sonet · Carens</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 4">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/audi.png"
+                alt="Audi"
+                class="brand-img"
+              />
+              <div class="brand-name">Audi</div>
+              <div class="brand-models">A4 · Q3 · Q5</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 5">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/volkswagen.png"
+                alt="Volkswagen"
+                class="brand-img"
+              />
+              <div class="brand-name">Volkswagen</div>
+              <div class="brand-models">Polo · Vento · Taigun</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 6">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/tata.png"
+                alt="Tata"
+                class="brand-img"
+              />
+              <div class="brand-name">Tata</div>
+              <div class="brand-models">Nexon · Tiago · Harrier</div>
+            </div>
+          </div>
+
+          <div class="brand-tile" style="--i: 7">
+            <div class="brand-tile-inner">
+              <img
+                src="https://raw.githubusercontent.com/filippofilip95/car-logos-dataset/master/logos/thumb/hyundai.png"
+                alt="Hyundai"
+                class="brand-img"
+              />
+              <div class="brand-name">Hyundai</div>
+              <div class="brand-models">i10 · i20 · Creta</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem">
+          <a
+            href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20please%20share%20your%20current%20stock"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold reveal"
+          >
+            <i class="fab fa-whatsapp"></i> Check Current Stock
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="brands-grid" id="brands-grid">
-
-        <div class="brand-tile" style="--i:0">
-          <div class="brand-tile-inner">
-            <img src="car-logo/toyota-logo.png" alt="Toyota" class="brand-img">
-            <div class="brand-name">Toyota</div>
-            <div class="brand-models">Innova · Innova Crysta</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:1">
-          <div class="brand-tile-inner">
-            <img src="car-logo/suzuki-logo.jpg" alt="Maruti Suzuki" class="brand-img">
-            <div class="brand-name">Maruti Suzuki</div>
-            <div class="brand-models">Swift · Dzire · Alto</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:2">
-          <div class="brand-tile-inner">
-            <img src="car-logo/mahindra-logo.jpg" alt="Mahindra" class="brand-img">
-            <div class="brand-name">Mahindra</div>
-            <div class="brand-models">Bolero · Scorpio · XUV</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:3">
-          <div class="brand-tile-inner">
-            <img src="car-logo/kia-logo.png" alt="KIA" class="brand-img">
-            <div class="brand-name">KIA</div>
-            <div class="brand-models">Seltos · Sonet · Carens</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:4">
-          <div class="brand-tile-inner">
-            <img src="car-logo/audi-logo.png" alt="Audi" class="brand-img">
-            <div class="brand-name">Audi</div>
-            <div class="brand-models">A4 · Q3 · Q5</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:5">
-          <div class="brand-tile-inner">
-            <img src="car-logo/Volkswagen-logo.png" alt="Volkswagen" class="brand-img">
-            <div class="brand-name">Volkswagen</div>
-            <div class="brand-models">Polo · Vento · Taigun</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:6">
-          <div class="brand-tile-inner">
-            <div class="brand-text-logo">TATA</div>
-            <div class="brand-name">Tata</div>
-            <div class="brand-models">Nexon · Tiago · Harrier</div>
-          </div>
-        </div>
-
-        <div class="brand-tile" style="--i:7">
-          <div class="brand-tile-inner">
-            <div class="brand-text-logo" style="font-size:1.4rem;">HYUNDAI</div>
-            <div class="brand-name">Hyundai</div>
-            <div class="brand-models">i10 · i20 · Creta</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="text-center" style="margin-top:3rem;">
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20please%20share%20your%20current%20stock"
-           target="_blank" rel="noopener"
-           class="btn btn-gold reveal">
-          <i class="fab fa-whatsapp"></i> Check Current Stock
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        WHY CHOOSE US
   ============================================================ -->
-  <section id="why-us" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">Why SK Cars</div>
-        <h2 class="section-title">Why <span>Choose Us?</span></h2>
-        <p class="section-sub">We put customers first — every single time.</p>
-      </div>
+    <section id="why-us" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Why SK Cars</div>
+          <h2 class="section-title">Why <span>Choose Us?</span></h2>
+          <p class="section-sub">We put customers first — every single time.</p>
+        </div>
 
-      <div class="stats-grid reveal-stagger">
-        <div class="glass-gold stat-card">
-          <div class="stat-num"><span data-counter data-target="10">0</span><span class="stat-suffix">+</span></div>
-          <div class="stat-label">Years Experience</div>
+        <div class="stats-grid reveal-stagger">
+          <div class="glass-gold stat-card">
+            <div class="stat-num">
+              <span data-counter data-target="10">0</span
+              ><span class="stat-suffix">+</span>
+            </div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="glass-gold stat-card">
+            <div class="stat-num">
+              <span data-counter data-target="3000">0</span
+              ><span class="stat-suffix">+</span>
+            </div>
+            <div class="stat-label">Cars Sold</div>
+          </div>
+          <div class="glass-gold stat-card">
+            <div class="stat-num">
+              <span data-counter data-target="5000">0</span
+              ><span class="stat-suffix">+</span>
+            </div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="glass-gold stat-card">
+            <div class="stat-num">
+              <span data-counter data-target="4.1" data-decimal="true">0</span
+              ><span class="stat-suffix">★</span>
+            </div>
+            <div class="stat-label">Justdial Rating</div>
+          </div>
         </div>
-        <div class="glass-gold stat-card">
-          <div class="stat-num"><span data-counter data-target="500">0</span><span class="stat-suffix">+</span></div>
-          <div class="stat-label">Cars Sold</div>
-        </div>
-        <div class="glass-gold stat-card">
-          <div class="stat-num"><span data-counter data-target="1000">0</span><span class="stat-suffix">+</span></div>
-          <div class="stat-label">Happy Customers</div>
-        </div>
-        <div class="glass-gold stat-card">
-          <div class="stat-num"><span data-counter data-target="4.1" data-decimal="true">0</span><span class="stat-suffix">★</span></div>
-          <div class="stat-label">Justdial Rating</div>
+
+        <div class="features-grid reveal-stagger">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+            <div class="feature-text">
+              <strong>RC Transfer Assistance</strong>
+              <span>We handle all the paperwork — stress free</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
+            <div class="feature-text">
+              <strong>Loan & Finance Help</strong>
+              <span>Easy EMI options with top banks</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-road"></i></div>
+            <div class="feature-text">
+              <strong>Test Drive Available</strong>
+              <span>Feel confident before you commit</span>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
+            <div class="feature-text">
+              <strong>7-Day Return Policy</strong>
+              <span>Buy with total peace of mind</span>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="features-grid reveal-stagger">
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
-          <div class="feature-text">
-            <strong>RC Transfer Assistance</strong>
-            <span>We handle all the paperwork — stress free</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
-          <div class="feature-text">
-            <strong>Loan & Finance Help</strong>
-            <span>Easy EMI options with top banks</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-road"></i></div>
-          <div class="feature-text">
-            <strong>Test Drive Available</strong>
-            <span>Feel confident before you commit</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <div class="feature-icon"><i class="fas fa-rotate-left"></i></div>
-          <div class="feature-text">
-            <strong>7-Day Return Policy</strong>
-            <span>Buy with total peace of mind</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        FINANCE
   ============================================================ -->
-  <section id="finance" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">Easy Finance</div>
-        <h2 class="section-title">Buy Now, <span>Pay Easy</span></h2>
-        <p class="section-sub">We've partnered with India's leading finance companies to get you the best loan rates with minimal paperwork.</p>
+    <section id="finance" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Easy Finance</div>
+          <h2 class="section-title">Buy Now, <span>Pay Easy</span></h2>
+          <p class="section-sub">
+            We've partnered with India's leading finance companies to get you
+            the best loan rates with minimal paperwork.
+          </p>
+        </div>
+
+        <div class="finance-grid reveal-stagger">
+          <div class="finance-card">
+            <div class="finance-logo-wrap">
+              <img
+                src="finserv-logo/bajaj-transparent.png"
+                alt="Bajaj Finance"
+                class="finance-logo-img"
+              />
+            </div>
+            <div class="finance-name">Bajaj Finance</div>
+            <ul class="finance-features">
+              <li><i class="fas fa-check"></i> Instant loan approval</li>
+              <li><i class="fas fa-check"></i> 0% processing fee offers</li>
+              <li><i class="fas fa-check"></i> Flexible EMI options</li>
+            </ul>
+          </div>
+
+          <div class="finance-card">
+            <div class="finance-logo-wrap">
+              <img
+                src="finserv-logo/IMG-20220411-WA0023.jpg"
+                alt="HDFC Bank"
+                class="finance-logo-img"
+              />
+            </div>
+            <div class="finance-name">HDFC Bank</div>
+            <ul class="finance-features">
+              <li><i class="fas fa-check"></i> Low interest rates</li>
+              <li><i class="fas fa-check"></i> Up to 7-year tenure</li>
+              <li><i class="fas fa-check"></i> Quick disbursal</li>
+            </ul>
+          </div>
+
+          <div class="finance-card">
+            <div class="finance-logo-wrap">
+              <img
+                src="finserv-logo/icici-bank-finance-bank-of-india-bank-text-logo.png"
+                alt="ICICI Bank"
+                class="finance-logo-img"
+              />
+            </div>
+            <div class="finance-name">ICICI Bank</div>
+            <ul class="finance-features">
+              <li><i class="fas fa-check"></i> Pre-approved loans</li>
+              <li><i class="fas fa-check"></i> Minimal documentation</li>
+              <li><i class="fas fa-check"></i> Online application</li>
+            </ul>
+          </div>
+
+          <div class="finance-card">
+            <div class="finance-logo-wrap">
+              <img
+                src="finserv-logo/sbi-state-bank-of-india-logo-bank-logos.png"
+                alt="SBI Auto Loan"
+                class="finance-logo-img"
+              />
+            </div>
+            <div class="finance-name">SBI Auto Loan</div>
+            <ul class="finance-features">
+              <li><i class="fas fa-check"></i> Lowest interest rate</li>
+              <li><i class="fas fa-check"></i> Up to 85% funding</li>
+              <li><i class="fas fa-check"></i> No hidden charges</li>
+            </ul>
+          </div>
+
+          <div class="finance-card">
+            <div class="finance-logo-wrap">
+              <img
+                src="finserv-logo/Muthoot-finance-logo.png"
+                alt="Muthoot Capital"
+                class="finance-logo-img"
+              />
+            </div>
+            <div class="finance-name">Muthoot Capital</div>
+            <ul class="finance-features">
+              <li><i class="fas fa-check"></i> Two-wheeler & car loans</li>
+              <li><i class="fas fa-check"></i> Same-day sanction</li>
+              <li><i class="fas fa-check"></i> Low CIBIL score OK</li>
+            </ul>
+          </div>
+
+          <div class="finance-card finance-card-cta">
+            <div class="finance-cta-icon">
+              <i class="fas fa-piggy-bank"></i>
+            </div>
+            <div class="finance-name">Need Guidance?</div>
+            <p class="finance-cta-text">
+              Our finance team will help you choose the best loan option that
+              fits your budget.
+            </p>
+            <a
+              href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%20need%20help%20with%20car%20finance"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-gold"
+              style="margin-top: 1rem; width: 100%; justify-content: center"
+            >
+              <i class="fab fa-whatsapp"></i> Get Finance Help
+            </a>
+          </div>
+        </div>
+
+        <div class="finance-note reveal">
+          <i class="fas fa-circle-info"></i>
+          EMI starts from <strong>₹3,999/month</strong> &nbsp;·&nbsp; Loan up to
+          <strong>85%</strong> of car value &nbsp;·&nbsp; Tenure up to
+          <strong>7 years</strong> &nbsp;·&nbsp; Subject to bank approval
+        </div>
+
+        <!-- EMI Calculator -->
+        <div class="emi-calc reveal">
+          <div class="emi-calc-title">
+            <i class="fas fa-calculator"></i> EMI Calculator
+          </div>
+          <div class="emi-calc-grid">
+            <div class="emi-input-group">
+              <label>Loan Amount</label>
+              <input
+                type="range"
+                id="emiAmount"
+                min="100000"
+                max="2000000"
+                step="10000"
+                value="500000"
+                oninput="calcEMI()"
+              />
+              <div class="emi-val" id="emiAmountVal">₹5,00,000</div>
+            </div>
+            <div class="emi-input-group">
+              <label>Interest Rate (% p.a.)</label>
+              <input
+                type="range"
+                id="emiRate"
+                min="7"
+                max="20"
+                step="0.5"
+                value="10"
+                oninput="calcEMI()"
+              />
+              <div class="emi-val" id="emiRateVal">10%</div>
+            </div>
+            <div class="emi-input-group">
+              <label>Tenure</label>
+              <input
+                type="range"
+                id="emiTenure"
+                min="1"
+                max="15"
+                step="1"
+                value="3"
+                oninput="calcEMI()"
+              />
+              <div class="emi-val" id="emiTenureVal">3 Years</div>
+            </div>
+            <div class="emi-result-wrap">
+              <div class="emi-result-label">Monthly EMI</div>
+              <div class="emi-result" id="emiResult">₹16,133</div>
+              <div class="emi-breakdown">
+                Total Interest: <strong id="emiInterest">₹80,802</strong><br />
+                Total Payable: <strong id="emiTotal">₹5,80,802</strong>
+              </div>
+            </div>
+          </div>
+          <div class="emi-tc">
+            <i class="fas fa-circle-info"></i>
+            *T&amp;C apply. EMI figures are indicative only and subject to bank
+            approval, creditworthiness, processing fees, and applicable GST
+            charges.
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="finance-grid reveal-stagger">
+    <script>
+      function calcEMI() {
+        var P = parseInt(document.getElementById("emiAmount").value);
+        var annualRate = parseFloat(document.getElementById("emiRate").value);
+        var years = parseInt(document.getElementById("emiTenure").value);
+        var r = annualRate / 12 / 100;
+        var n = years * 12;
+        var emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        var totalPayable = emi * n;
+        var totalInterest = totalPayable - P;
 
-        <div class="finance-card">
-          <div class="finance-logo-wrap">
-            <div class="finance-logo-text" style="color:#FF6B00;font-size:1.5rem;font-weight:900;letter-spacing:0.04em;">Bajaj<br><span style="color:#1A1A1A;background:#FF6B00;padding:0.1rem 0.4rem;border-radius:3px;font-size:1rem;">Finance</span></div>
-          </div>
-          <div class="finance-name">Bajaj Finance</div>
-          <ul class="finance-features">
-            <li><i class="fas fa-check"></i> Instant loan approval</li>
-            <li><i class="fas fa-check"></i> 0% processing fee offers</li>
-            <li><i class="fas fa-check"></i> Flexible EMI options</li>
-          </ul>
-        </div>
+        document.getElementById("emiAmountVal").textContent =
+          "₹" + P.toLocaleString("en-IN");
+        document.getElementById("emiRateVal").textContent = annualRate + "%";
+        document.getElementById("emiTenureVal").textContent =
+          years + (years === 1 ? " Year" : " Years");
+        document.getElementById("emiResult").textContent =
+          "₹" + Math.round(emi).toLocaleString("en-IN");
+        document.getElementById("emiInterest").textContent =
+          "₹" + Math.round(totalInterest).toLocaleString("en-IN");
+        document.getElementById("emiTotal").textContent =
+          "₹" + Math.round(totalPayable).toLocaleString("en-IN");
+      }
+      calcEMI();
+    </script>
 
-        <div class="finance-card">
-          <div class="finance-logo-wrap">
-            <div class="finance-logo-text" style="color:#003087;font-size:1.1rem;font-weight:900;letter-spacing:0.06em;">HDFC<br><span style="font-size:0.85rem;color:#666;">Bank</span></div>
-          </div>
-          <div class="finance-name">HDFC Bank</div>
-          <ul class="finance-features">
-            <li><i class="fas fa-check"></i> Low interest rates</li>
-            <li><i class="fas fa-check"></i> Up to 7-year tenure</li>
-            <li><i class="fas fa-check"></i> Quick disbursal</li>
-          </ul>
-        </div>
-
-        <div class="finance-card">
-          <div class="finance-logo-wrap">
-            <div class="finance-logo-text" style="color:#F7941D;font-size:1.1rem;font-weight:900;">ICICI<br><span style="font-size:0.85rem;color:#666;">Bank</span></div>
-          </div>
-          <div class="finance-name">ICICI Bank</div>
-          <ul class="finance-features">
-            <li><i class="fas fa-check"></i> Pre-approved loans</li>
-            <li><i class="fas fa-check"></i> Minimal documentation</li>
-            <li><i class="fas fa-check"></i> Online application</li>
-          </ul>
-        </div>
-
-        <div class="finance-card">
-          <div class="finance-logo-wrap">
-            <div class="finance-logo-text" style="color:#1A9A2A;font-size:1.1rem;font-weight:900;">SBI<br><span style="font-size:0.85rem;color:#666;">Auto Loan</span></div>
-          </div>
-          <div class="finance-name">SBI Auto Loan</div>
-          <ul class="finance-features">
-            <li><i class="fas fa-check"></i> Lowest interest rate</li>
-            <li><i class="fas fa-check"></i> Up to 85% funding</li>
-            <li><i class="fas fa-check"></i> No hidden charges</li>
-          </ul>
-        </div>
-
-        <div class="finance-card">
-          <div class="finance-logo-wrap">
-            <div class="finance-logo-text" style="color:#D84040;font-size:1.1rem;font-weight:900;">Muthoot<br><span style="font-size:0.75rem;color:#888;">Capital Services</span></div>
-          </div>
-          <div class="finance-name">Muthoot Capital</div>
-          <ul class="finance-features">
-            <li><i class="fas fa-check"></i> Two-wheeler & car loans</li>
-            <li><i class="fas fa-check"></i> Same-day sanction</li>
-            <li><i class="fas fa-check"></i> Low CIBIL score OK</li>
-          </ul>
-        </div>
-
-        <div class="finance-card finance-card-cta">
-          <div class="finance-cta-icon"><i class="fas fa-piggy-bank"></i></div>
-          <div class="finance-name">Need Guidance?</div>
-          <p class="finance-cta-text">Our finance team will help you choose the best loan option that fits your budget.</p>
-          <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%20need%20help%20with%20car%20finance"
-             target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:1rem;width:100%;justify-content:center;">
-            <i class="fab fa-whatsapp"></i> Get Finance Help
-          </a>
-        </div>
-
-      </div>
-
-      <div class="finance-note reveal">
-        <i class="fas fa-circle-info"></i>
-        EMI starts from <strong>₹3,999/month</strong> &nbsp;·&nbsp; Loan up to <strong>85%</strong> of car value &nbsp;·&nbsp; Tenure up to <strong>7 years</strong> &nbsp;·&nbsp; Subject to bank approval
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        TESTIMONIALS
   ============================================================ -->
-  <section id="testimonials" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">Customer Reviews</div>
-        <h2 class="section-title">What Our <span>Customers Say</span></h2>
-        <p class="section-sub">Real stories from real customers across Tirunelveli.</p>
+    <section id="testimonials" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Customer Reviews</div>
+          <h2 class="section-title">What Our <span>Customers Say</span></h2>
+          <p class="section-sub">
+            Real stories from real customers across Tirunelveli.
+          </p>
+        </div>
+
+        <div class="grid-3 reveal-stagger">
+          <div class="glass testimonial-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testi-quote">
+              Bought my first car from SK Cars and the experience was amazing.
+              No pressure, transparent pricing, and they handled the RC transfer
+              completely. Highly recommended!
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">KR</div>
+              <div>
+                <div class="testi-name">Karthik R.</div>
+                <div class="testi-loc">Tirunelveli</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass testimonial-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testi-quote">
+              Sold my old Innova at a great price within 2 days. The team was
+              professional, honest, and made the entire process smooth. Will
+              definitely come back for my next car!
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">PS</div>
+              <div>
+                <div class="testi-name">Priya S.</div>
+                <div class="testi-loc">Palayamkottai</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass testimonial-card">
+            <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <p class="testi-quote">
+              Great collection of cars at fair prices. The staff patiently
+              showed me multiple options and helped me choose the right one for
+              my budget. Very trustworthy dealer.
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">MA</div>
+              <div>
+                <div class="testi-name">Mohammed A.</div>
+                <div class="testi-loc">Nanguneri</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid-3 reveal-stagger">
-        <div class="glass testimonial-card">
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testi-quote">Bought my first car from SK Cars and the experience was amazing. No pressure, transparent pricing, and they handled the RC transfer completely. Highly recommended!</p>
-          <div class="testi-author">
-            <div class="testi-avatar">KR</div>
-            <div>
-              <div class="testi-name">Karthik R.</div>
-              <div class="testi-loc">Tirunelveli</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass testimonial-card">
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="testi-quote">Sold my old Innova at a great price within 2 days. The team was professional, honest, and made the entire process smooth. Will definitely come back for my next car!</p>
-          <div class="testi-author">
-            <div class="testi-avatar">PS</div>
-            <div>
-              <div class="testi-name">Priya S.</div>
-              <div class="testi-loc">Palayamkottai</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="glass testimonial-card">
-          <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-          <p class="testi-quote">Great collection of cars at fair prices. The staff patiently showed me multiple options and helped me choose the right one for my budget. Very trustworthy dealer.</p>
-          <div class="testi-author">
-            <div class="testi-avatar">MA</div>
-            <div>
-              <div class="testi-name">Mohammed A.</div>
-              <div class="testi-loc">Nanguneri</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        CONTACT
   ============================================================ -->
-  <section id="contact" class="section-pad">
-    <div class="container">
-      <div class="text-center reveal">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Contact <span>SK Cars</span></h2>
-        <p class="section-sub">Ready to find your perfect car? Reach out — we'll respond quickly.</p>
-      </div>
+    <section id="contact" class="section-pad">
+      <div class="container">
+        <div class="text-center reveal">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Contact <span>SK Cars</span></h2>
+          <p class="section-sub">
+            Ready to find your perfect car? Reach out — we'll respond quickly.
+          </p>
+        </div>
 
-      <div class="contact-cards reveal-stagger">
-        <div class="contact-card-item">
-          <div class="contact-item-icon"><i class="fas fa-location-dot"></i></div>
-          <div class="contact-item-label">Address</div>
-          <div class="contact-item-val">
-            No. 7C Balaji Avenue, 2nd Cross Street,<br>
-            Tachanallur, Tirunelveli — 627358<br>
-            <small style="color:var(--gold);">(Near Railway Gate)</small>
+        <div class="contact-cards reveal-stagger">
+          <div class="contact-card-item">
+            <div class="contact-item-icon">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <div class="contact-item-label">Address</div>
+            <div class="contact-item-val">
+              No. 7C Balaji Avenue, 2nd Cross Street,<br />
+              Thachanallur, Tirunelveli — 627358<br />
+              <small style="color: var(--gold)">(Near Railway Gate)</small>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-item-label">Call Us</div>
+            <div class="contact-item-val">
+              <a href="tel:+919944866887">+91 99448 66887</a>
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-item-label">WhatsApp</div>
+            <div class="contact-item-val">
+              <a
+                href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20a%20car"
+                target="_blank"
+                rel="noopener"
+                >Chat on WhatsApp</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-card-item">
+            <div class="contact-item-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="contact-item-label">Instagram</div>
+            <div class="contact-item-val">
+              <a
+                href="https://www.instagram.com/sk_cars_tirunelveli/"
+                target="_blank"
+                rel="noopener"
+                >@sk_cars_tirunelveli</a
+              >
+            </div>
           </div>
         </div>
 
-        <div class="contact-card-item">
-          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-          <div class="contact-item-label">Call Us</div>
-          <div class="contact-item-val">
-            <a href="tel:+919944866887">+91 99448 66887</a>
+        <div class="map-split reveal" style="margin-top: 2.5rem">
+          <div class="map-info-panel">
+            <div class="map-info-brand">
+              <div class="map-info-brand-icon"><i class="fas fa-car"></i></div>
+              <div>
+                <div class="map-info-brand-name">SK Cars</div>
+                <div class="map-info-brand-sub">Premium Used Cars</div>
+              </div>
+            </div>
+
+            <div class="map-info-row">
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <div class="map-info-row-label">Address</div>
+                <div class="map-info-row-val">
+                  No. 7C Balaji Avenue,<br />2nd Cross Street,<br />
+                  Thachanallur, Tirunelveli — 627358
+                  <div class="map-info-badge">Near Railway Gate</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-info-row">
+              <i class="fas fa-clock"></i>
+              <div>
+                <div class="map-info-row-label">Hours</div>
+                <div class="map-info-row-val">
+                  Mon – Sat &nbsp; 9:00 AM – 7:00 PM<br />
+                  Sunday &nbsp; 10:00 AM – 5:00 PM
+                </div>
+              </div>
+            </div>
+
+            <div class="map-info-row">
+              <i class="fas fa-phone"></i>
+              <div>
+                <div class="map-info-row-label">Call / WhatsApp</div>
+                <div class="map-info-row-val">
+                  <a href="tel:+919944866887">+91 99448 66887</a>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.app.goo.gl/E4QpxXqZpwWkJ5ZJ6"
+              target="_blank"
+              rel="noopener"
+              class="map-directions-btn"
+            >
+              <i class="fas fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+
+          <div class="map-iframe-wrap">
+            <iframe
+              src="https://maps.google.com/maps?q=SK+Cars+Thachanallur+Tirunelveli+627358&output=embed"
+              title="SK Cars Location"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
 
-        <div class="contact-card-item">
-          <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="contact-item-label">WhatsApp</div>
-          <div class="contact-item-val">
-            <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20a%20car"
-               target="_blank" rel="noopener">Chat on WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="contact-card-item">
-          <div class="contact-item-icon"><i class="fab fa-instagram"></i></div>
-          <div class="contact-item-label">Instagram</div>
-          <div class="contact-item-val">
-            <a href="https://www.instagram.com/sk_cars_tirunelveli/"
-               target="_blank" rel="noopener">@sk_cars_tirunelveli</a>
-          </div>
+        <div class="text-center" style="margin-top: 2.5rem" class="reveal">
+          <a
+            href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20a%20car"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-gold"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+          </a>
+          &nbsp;&nbsp;
+          <a href="tel:+919944866887" class="btn btn-outline">
+            <i class="fas fa-phone"></i> Call Us
+          </a>
         </div>
       </div>
+    </section>
 
-      <div class="map-wrap reveal" style="margin-top:2.5rem;">
-        <iframe
-          src="https://maps.google.com/maps?q=Tachanallur+Tirunelveli+627358&output=embed"
-          title="SK Cars Location"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
-      </div>
-
-      <div class="text-center" style="margin-top:2.5rem;" class="reveal">
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20interested%20in%20a%20car"
-           target="_blank" rel="noopener" class="btn btn-gold">
-          <i class="fab fa-whatsapp"></i> WhatsApp Us Now
-        </a>
-        &nbsp;&nbsp;
-        <a href="tel:+919944866887" class="btn btn-outline">
-          <i class="fas fa-phone"></i> Call Us
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
+    <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-logo" style="display:flex;align-items:center;gap:0.6rem;">
-            <img src="logo.jpg" alt="SK Cars" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid rgba(216,64,64,0.40);">
-            <span class="logo-sk">SK</span><span class="logo-cars">CARS</span>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <div
+              class="footer-logo"
+              style="display: flex; align-items: center; gap: 0.6rem"
+            >
+              <img
+                src="sk logo-transparent.png"
+                alt="SK Cars"
+                style="
+                  width: 44px;
+                  height: 44px;
+                  object-fit: contain;
+                  filter: drop-shadow(0 0 6px rgba(216, 64, 64, 0.45));
+                "
+              />
+            </div>
+            <div class="footer-tagline">Premium Used Cars · Tirunelveli</div>
           </div>
-          <div class="footer-tagline">Premium Used Cars · Tirunelveli</div>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cars">Cars</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/sk_cars_tirunelveli/"
+              target="_blank"
+              rel="noopener"
+              class="social-btn social-btn-ig"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://wa.me/919944866887"
+              target="_blank"
+              rel="noopener"
+              class="social-btn social-btn-wa"
+              title="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="tel:+919944866887"
+              class="social-btn social-btn-ph"
+              title="Call"
+            >
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
         </div>
-        <ul class="footer-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#cars">Cars</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/sk_cars_tirunelveli/" target="_blank" rel="noopener"
-             class="social-btn social-btn-ig" title="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/919944866887" target="_blank" rel="noopener"
-             class="social-btn social-btn-wa" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a href="tel:+919944866887" class="social-btn social-btn-ph" title="Call">
-            <i class="fas fa-phone"></i>
-          </a>
+        <div class="footer-bottom">
+          © 2026 SK Cars, Thachanallur, Tirunelveli. All rights reserved.
+          &nbsp;|&nbsp;
+          <a
+            href="https://www.instagram.com/sk_cars_tirunelveli/"
+            target="_blank"
+            rel="noopener"
+            >@sk_cars_tirunelveli</a
+          >
         </div>
       </div>
-      <div class="footer-bottom">
-        © 2025 SK Cars, Tachanallur, Tirunelveli. All rights reserved. &nbsp;|&nbsp;
-        <a href="https://www.instagram.com/sk_cars_tirunelveli/" target="_blank" rel="noopener">@sk_cars_tirunelveli</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
-     target="_blank" rel="noopener"
-     class="floating-wa" title="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
+      target="_blank"
+      rel="noopener"
+      class="floating-wa"
+      title="Chat on WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
 
-  <!-- ============================================================
+    <!-- ============================================================
        JAVASCRIPT
   ============================================================ -->
-  <script>
-    // 1. Navbar scroll effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 80);
-    }, { passive: true });
+    <script>
+      // 1. Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener(
+        "scroll",
+        () => {
+          navbar.classList.toggle("scrolled", window.scrollY > 80);
+        },
+        { passive: true },
+      );
 
-    // 2. Mobile hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('nav-links');
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navLinks.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
-    navLinks.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
+      // 2. Mobile hamburger
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+      hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("active");
       });
-    });
-    document.addEventListener('click', (e) => {
-      if (!navbar.contains(e.target)) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('active');
+      navLinks.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        });
+      });
+      document.addEventListener("click", (e) => {
+        if (!navbar.contains(e.target)) {
+          navLinks.classList.remove("open");
+          hamburger.classList.remove("active");
+        }
+      });
+
+      // 3. Intersection Observer – scroll reveals
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document
+        .querySelectorAll(".reveal, .reveal-stagger")
+        .forEach((el) => revealObs.observe(el));
+
+      // 4. Animated counters
+      function animateCounter(el) {
+        const target = parseFloat(el.dataset.target);
+        const decimal = el.dataset.decimal === "true";
+        const duration = 2000;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const e = 1 - Math.pow(1 - p, 3);
+          el.textContent = decimal
+            ? (e * target).toFixed(1)
+            : Math.floor(e * target);
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
       }
-    });
+      const counterObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              counterObs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      document
+        .querySelectorAll("[data-counter]")
+        .forEach((el) => counterObs.observe(el));
 
-    // 3. Intersection Observer – scroll reveals
-    const revealObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => revealObs.observe(el));
+      // 5. Scroll spy – active nav link
+      const sections = document.querySelectorAll("section[id]");
+      const navItems = document.querySelectorAll('#nav-links a[href^="#"]');
+      const spyObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navItems.forEach((a) => a.classList.remove("active"));
+              const active = document.querySelector(
+                `#nav-links a[href="#${entry.target.id}"]`,
+              );
+              if (active) active.classList.add("active");
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -55% 0px" },
+      );
+      sections.forEach((s) => spyObs.observe(s));
 
-    // 4. Animated counters
-    function animateCounter(el) {
-      const target   = parseFloat(el.dataset.target);
-      const decimal  = el.dataset.decimal === 'true';
-      const duration = 2000;
-      const start    = performance.now();
-      function step(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const e = 1 - Math.pow(1 - p, 3);
-        el.textContent = decimal ? (e * target).toFixed(1) : Math.floor(e * target);
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
-    }
-    const counterObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateCounter(entry.target);
-          counterObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-counter]').forEach(el => counterObs.observe(el));
+      // 6. (form removed)
 
-    // 5. Scroll spy – active nav link
-    const sections = document.querySelectorAll('section[id]');
-    const navItems  = document.querySelectorAll('#nav-links a[href^="#"]');
-    const spyObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navItems.forEach(a => a.classList.remove('active'));
-          const active = document.querySelector(`#nav-links a[href="#${entry.target.id}"]`);
-          if (active) active.classList.add('active');
-        }
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    sections.forEach(s => spyObs.observe(s));
+      // 7. Three.js Hero Animation — floating car wireframes
+      (function () {
+        const container = document.getElementById("threejs-canvas");
+        const hero = document.getElementById("hero");
 
-    // 6. (form removed)
-
-    // 7. Three.js Hero Animation — floating car wireframes
-    (function() {
-      const container = document.getElementById('threejs-canvas');
-      const hero = document.getElementById('hero');
-
-      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      renderer.setSize(hero.offsetWidth, hero.offsetHeight);
-      renderer.setClearColor(0x000000, 0);
-      container.appendChild(renderer.domElement);
-      Object.assign(renderer.domElement.style, {
-        position: 'absolute', top: 0, left: 0,
-        width: '100%', height: '100%', pointerEvents: 'none', zIndex: 1
-      });
-
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(60, hero.offsetWidth / hero.offsetHeight, 0.1, 200);
-      camera.position.set(0, 0, 30);
-
-      // Car-shaped wireframe built from boxes (body + roof + wheels)
-      function makeCar(color) {
-        const g = new THREE.Group();
-        const mat = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity: 0.55 });
-
-        // Body
-        const body = new THREE.Mesh(new THREE.BoxGeometry(4, 1.2, 2), mat);
-        body.position.y = 0.4;
-        g.add(body);
-
-        // Roof / cabin
-        const roof = new THREE.Mesh(new THREE.BoxGeometry(2.4, 0.9, 1.8), mat);
-        roof.position.set(-0.2, 1.45, 0);
-        g.add(roof);
-
-        // Wheels (4 tori)
-        const wMat = new THREE.MeshBasicMaterial({ color, wireframe: true, transparent: true, opacity: 0.4 });
-        const wGeo = new THREE.TorusGeometry(0.55, 0.18, 6, 12);
-        [[-1.5, -0.35, 1.1], [1.5, -0.35, 1.1], [-1.5, -0.35, -1.1], [1.5, -0.35, -1.1]].forEach(([x,y,z]) => {
-          const w = new THREE.Mesh(wGeo, wMat);
-          w.position.set(x, y, z);
-          w.rotation.y = Math.PI / 2;
-          g.add(w);
+        const renderer = new THREE.WebGLRenderer({
+          antialias: true,
+          alpha: true,
+        });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(hero.offsetWidth, hero.offsetHeight);
+        renderer.setClearColor(0x000000, 0);
+        container.appendChild(renderer.domElement);
+        Object.assign(renderer.domElement.style, {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          zIndex: 1,
         });
 
-        return g;
-      }
-
-      const colors = [0xD84040, 0xEEEEEE, 0x8E1616, 0xFF6666, 0xCC3333];
-      const cars = [];
-      for (let i = 0; i < 12; i++) {
-        const car = makeCar(colors[i % colors.length]);
-        car.position.set(
-          (Math.random() - 0.5) * 70,
-          (Math.random() - 0.5) * 35,
-          (Math.random() - 0.5) * 20 - 5
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(
+          60,
+          hero.offsetWidth / hero.offsetHeight,
+          0.1,
+          200,
         );
-        car.rotation.set(
-          Math.random() * Math.PI,
-          Math.random() * Math.PI,
-          Math.random() * Math.PI
-        );
-        const s = Math.random() * 0.5 + 0.4;
-        car.scale.setScalar(s);
-        car._speed = { x: (Math.random() - 0.5) * 0.004, y: (Math.random() - 0.5) * 0.003, z: 0 };
-        car._rot   = { x: (Math.random() - 0.5) * 0.006, y: (Math.random() - 0.5) * 0.006 };
-        scene.add(car);
-        cars.push(car);
-      }
+        camera.position.set(0, 0, 30);
 
-      // Small floating particles
-      const pGeo = new THREE.BufferGeometry();
-      const pCount = 200;
-      const pPos = new Float32Array(pCount * 3);
-      for (let i = 0; i < pCount * 3; i++) pPos[i] = (Math.random() - 0.5) * 80;
-      pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-      const pMat = new THREE.PointsMaterial({ color: 0xD84040, size: 0.18, transparent: true, opacity: 0.5 });
-      scene.add(new THREE.Points(pGeo, pMat));
+        // Car-shaped wireframe built from boxes (body + roof + wheels)
+        function makeCar(color) {
+          const g = new THREE.Group();
+          const mat = new THREE.MeshBasicMaterial({
+            color,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.55,
+          });
 
-      window.addEventListener('resize', () => {
-        const w = hero.offsetWidth, h = hero.offsetHeight;
-        renderer.setSize(w, h);
-        camera.aspect = w / h;
-        camera.updateProjectionMatrix();
-      }, { passive: true });
+          // Body
+          const body = new THREE.Mesh(new THREE.BoxGeometry(4, 1.2, 2), mat);
+          body.position.y = 0.4;
+          g.add(body);
 
-      let mouse = { x: 0, y: 0 };
-      document.addEventListener('mousemove', e => {
-        mouse.x = (e.clientX / window.innerWidth - 0.5) * 0.5;
-        mouse.y = (e.clientY / window.innerHeight - 0.5) * 0.3;
-      }, { passive: true });
+          // Roof / cabin
+          const roof = new THREE.Mesh(
+            new THREE.BoxGeometry(2.4, 0.9, 1.8),
+            mat,
+          );
+          roof.position.set(-0.2, 1.45, 0);
+          g.add(roof);
 
-      function animate() {
-        requestAnimationFrame(animate);
-        cars.forEach(car => {
-          car.position.x += car._speed.x;
-          car.position.y += car._speed.y;
-          car.rotation.x += car._rot.x;
-          car.rotation.y += car._rot.y;
-          // Wrap around
-          if (car.position.x > 38) car.position.x = -38;
-          if (car.position.x < -38) car.position.x = 38;
-          if (car.position.y > 20) car.position.y = -20;
-          if (car.position.y < -20) car.position.y = 20;
+          // Wheels (4 tori)
+          const wMat = new THREE.MeshBasicMaterial({
+            color,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.4,
+          });
+          const wGeo = new THREE.TorusGeometry(0.55, 0.18, 6, 12);
+          [
+            [-1.5, -0.35, 1.1],
+            [1.5, -0.35, 1.1],
+            [-1.5, -0.35, -1.1],
+            [1.5, -0.35, -1.1],
+          ].forEach(([x, y, z]) => {
+            const w = new THREE.Mesh(wGeo, wMat);
+            w.position.set(x, y, z);
+            w.rotation.y = Math.PI / 2;
+            g.add(w);
+          });
+
+          return g;
+        }
+
+        const colors = [0xd84040, 0xeeeeee, 0x8e1616, 0xff6666, 0xcc3333];
+        const cars = [];
+        for (let i = 0; i < 12; i++) {
+          const car = makeCar(colors[i % colors.length]);
+          car.position.set(
+            (Math.random() - 0.5) * 70,
+            (Math.random() - 0.5) * 35,
+            (Math.random() - 0.5) * 20 - 5,
+          );
+          car.rotation.set(
+            Math.random() * Math.PI,
+            Math.random() * Math.PI,
+            Math.random() * Math.PI,
+          );
+          const s = Math.random() * 0.5 + 0.4;
+          car.scale.setScalar(s);
+          car._speed = {
+            x: (Math.random() - 0.5) * 0.004,
+            y: (Math.random() - 0.5) * 0.003,
+            z: 0,
+          };
+          car._rot = {
+            x: (Math.random() - 0.5) * 0.006,
+            y: (Math.random() - 0.5) * 0.006,
+          };
+          scene.add(car);
+          cars.push(car);
+        }
+
+        // Small floating particles
+        const pGeo = new THREE.BufferGeometry();
+        const pCount = 200;
+        const pPos = new Float32Array(pCount * 3);
+        for (let i = 0; i < pCount * 3; i++)
+          pPos[i] = (Math.random() - 0.5) * 80;
+        pGeo.setAttribute("position", new THREE.BufferAttribute(pPos, 3));
+        const pMat = new THREE.PointsMaterial({
+          color: 0xd84040,
+          size: 0.18,
+          transparent: true,
+          opacity: 0.5,
         });
-        camera.position.x += (mouse.x * 3 - camera.position.x) * 0.03;
-        camera.position.y += (-mouse.y * 2 - camera.position.y) * 0.03;
-        camera.lookAt(scene.position);
-        renderer.render(scene, camera);
-      }
-      animate();
-    })();
-  </script>
-</body>
+        scene.add(new THREE.Points(pGeo, pMat));
+
+        window.addEventListener(
+          "resize",
+          () => {
+            const w = hero.offsetWidth,
+              h = hero.offsetHeight;
+            renderer.setSize(w, h);
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+          },
+          { passive: true },
+        );
+
+        let mouse = { x: 0, y: 0 };
+        document.addEventListener(
+          "mousemove",
+          (e) => {
+            mouse.x = (e.clientX / window.innerWidth - 0.5) * 0.5;
+            mouse.y = (e.clientY / window.innerHeight - 0.5) * 0.3;
+          },
+          { passive: true },
+        );
+
+        function animate() {
+          requestAnimationFrame(animate);
+          cars.forEach((car) => {
+            car.position.x += car._speed.x;
+            car.position.y += car._speed.y;
+            car.rotation.x += car._rot.x;
+            car.rotation.y += car._rot.y;
+            // Wrap around
+            if (car.position.x > 38) car.position.x = -38;
+            if (car.position.x < -38) car.position.x = 38;
+            if (car.position.y > 20) car.position.y = -20;
+            if (car.position.y < -20) car.position.y = 20;
+          });
+          camera.position.x += (mouse.x * 3 - camera.position.x) * 0.03;
+          camera.position.y += (-mouse.y * 2 - camera.position.y) * 0.03;
+          camera.lookAt(scene.position);
+          renderer.render(scene, camera);
+        }
+        animate();
+      })();
+    </script>
+  </body>
 </html>
