@@ -296,13 +296,19 @@ function initThreeJS() {
 .scroll-indicator i { font-size: 1.1rem; animation: bounce 2s ease-in-out infinite; }
 
 @media (max-width: 768px) {
+  .hero-content { padding-top: 90px; }
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
-  .hero-stats { gap: 1.5rem; }
+  .hero-stats { gap: 1.5rem; margin-top: 2.5rem; }
   .hero-stat-divider { display: none; }
 }
 @media (max-width: 480px) {
-  .hero-stat-num { font-size: 1.4rem; }
+  .hero-content { padding-top: 80px; }
+  .hero-tag { font-size: 0.7rem; padding: 0.35rem 0.85rem; }
+  .hero-sub { font-size: 0.9rem; margin-bottom: 1.75rem; }
+  .hero-stats { gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+  .hero-stat-num { font-size: 1.3rem; }
+  .hero-stat-label { font-size: 0.68rem; }
   .scroll-indicator { display: none; }
 }
 </style>

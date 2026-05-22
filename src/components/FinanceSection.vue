@@ -128,5 +128,16 @@ const financePartners = [
 .finance-note strong { color: var(--text); }
 
 @media (max-width:1024px) { .finance-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width:480px)  { .finance-grid { grid-template-columns: 1fr; } }
+@media (max-width:600px)  {
+  .finance-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+  .finance-card { padding: 1.25rem 1rem; }
+  .finance-logo-wrap { height: 56px; }
+  .finance-logo-img { max-height: 36px; }
+  .finance-note { font-size: 0.78rem; padding: 0.85rem 1rem; line-height: 1.8; }
+  .emi-calc { padding: 1.25rem 1rem; }
+  .emi-calc-title { font-size: 1.1rem; }
+  .emi-calc-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .emi-result { font-size: 1.35rem; }
+  .emi-result-wrap { min-width: unset; }
+}
 </style>

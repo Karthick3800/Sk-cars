@@ -130,6 +130,11 @@ const navLinks = [
   .footer-links { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 480px) {
+  #footer { padding: 2.5rem 0 1.5rem; }
   .footer-links { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-tagline { font-size: 0.8rem; }
+  .footer-col ul li { font-size: 0.8rem; }
+  .footer-bottom { font-size: 0.72rem; }
+  .footer-logo-img { width: 40px; height: 40px; }
 }
 </style>

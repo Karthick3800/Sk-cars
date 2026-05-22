@@ -97,5 +97,9 @@ const testimonials = [
 .t-detail { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.15rem; }
 
 @media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px)  { .testimonials-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px)  {
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 1.5rem 1.25rem; }
+  .t-quote { font-size: 0.85rem; }
+}
 </style>

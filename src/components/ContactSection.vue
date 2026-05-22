@@ -230,6 +230,15 @@ onMounted(() => {
   .contact-layout { grid-template-columns: 1fr; }
   .map-frame { height: 320px; }
 }
+@media (max-width: 600px) {
+  .contact-card { padding: 1rem; gap: 0.75rem; }
+  .contact-icon { width: 36px; height: 36px; font-size: 0.9rem; border-radius: 8px; }
+  .contact-value { font-size: 0.85rem; }
+  .contact-actions { flex-direction: column; }
+  .contact-actions .btn { width: 100%; justify-content: center; }
+  .map-frame { height: 260px; }
+  .map-overlay-badge { font-size: 0.68rem; padding: 0.35rem 0.7rem; }
+}
 </style>
 
 <!-- Global styles for Leaflet custom elements (not scoped) -->

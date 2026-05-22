@@ -28,6 +28,12 @@ const services = [
 
 <style scoped>
 #services { background: #0E0808; }
+@media (max-width: 480px) {
+  .service-card { padding: 1.25rem; }
+  .service-icon { width: 44px; height: 44px; font-size: 1.1rem; margin-bottom: 1rem; }
+  .service-title { font-size: 1.1rem; }
+  .service-desc { font-size: 0.85rem; }
+}
 .service-card {
   padding: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;

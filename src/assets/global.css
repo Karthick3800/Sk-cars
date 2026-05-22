@@ -227,6 +227,11 @@ button { cursor: pointer; font-family: inherit; }
 @media (max-width:480px) {
   :root { --section-gap:50px; }
   .grid-3 { grid-template-columns:1fr; }
+  .grid-4 { grid-template-columns:1fr; }
   .section-tag { justify-content:center; }
   .section-tag::before, .section-tag::after { display:none; }
+  .container { padding: 0 1rem; }
+  .btn { padding: 0.72rem 1.25rem; font-size: 0.85rem; }
+  .section-title { font-size: 1.6rem; }
+  .section-sub { font-size: 0.85rem; margin-bottom: 2rem; }
 }

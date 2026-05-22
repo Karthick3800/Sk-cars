@@ -385,9 +385,23 @@ onMounted(() => {
 @media (max-width:768px) {
   .features-grid { grid-template-columns: 1fr; }
   .cta-banner { flex-direction: column; text-align: center; padding: 1.5rem; }
-  .cta-banner-right { justify-content: center; }
+  .cta-banner-right { justify-content: center; width: 100%; }
+  .cta-banner-right .btn { flex: 1; justify-content: center; min-width: 0; }
+  .steps-title { font-size: 1.3rem; }
 }
 @media (max-width:480px) {
-  .compare-table th, .compare-table td { padding: 0.7rem 0.75rem; font-size: 0.78rem; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); gap: 0.75rem; }
+  .stat-card { padding: 1.25rem 0.75rem; }
+  .stat-num { font-size: 2rem; }
+  .stat-suffix { font-size: 1.3rem; }
+  .stat-label { font-size: 0.75rem; }
+  .compare-table th, .compare-table td { padding: 0.65rem 0.6rem; font-size: 0.75rem; }
+  .compare-wrap { margin: 0 -1rem; border-radius: 0; }
+  .steps-title { font-size: 1.15rem; }
+  .step-card { padding: 1.5rem 1rem; }
+  .promise-strip { gap: 0.75rem 1.5rem; padding: 1rem; }
+  .promise-item { font-size: 0.78rem; }
+  .cta-banner-right { flex-direction: column; }
+  .cta-banner-right .btn { width: 100%; }
 }
 </style>
