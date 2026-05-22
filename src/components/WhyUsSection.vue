@@ -4,7 +4,7 @@
       <div class="text-center reveal">
         <div class="section-tag">Why SK Cars</div>
         <h2 class="section-title">Why <span>Choose Us?</span></h2>
-        <p class="section-sub">Over a decade of trust, transparency, and thousands of happy customers across Tirunelveli.</p>
+        <p class="section-sub">38 years of trust, transparency, and 8000+ happy customers across Tirunelveli.</p>
       </div>
 
       <!-- Counters -->
