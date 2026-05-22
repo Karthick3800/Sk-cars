@@ -23,7 +23,7 @@
             <i class="fas fa-location-dot"></i>
             <div>
               No. 7C Balaji Avenue, 2nd Cross Street,<br>
-              Tachanallur, Tirunelveli — 627358<br>
+              Thachanallur, Tirunelveli — 627358<br>
               <span class="highlight">(Near Railway Gate)</span>
             </div>
           </div>
@@ -47,12 +47,12 @@
 
 <script setup>
 const miniStats = [
-  { icon: 'fas fa-calendar-check', label: 'Est. 2018' },
+  { icon: 'fas fa-calendar-check', label: 'Est. 1999' },
   { icon: 'fas fa-car',            label: '3000+ Cars Sold' },
   { icon: 'fas fa-users',          label: '5000+ Customers' },
 ]
 const visStats = [
-  { num: '10+',   label: 'Years' },
+  { num: '25+',   label: 'Years' },
   { num: '3000+', label: 'Cars Sold' },
   { num: '5000+', label: 'Customers' },
   { num: '4.1★',  label: 'Rating' },

@@ -10,7 +10,7 @@
       <div class="finance-grid reveal-stagger">
         <div class="finance-card" v-for="f in financePartners" :key="f.name">
           <div class="finance-logo-wrap">
-            <div class="finance-logo-text" :style="f.style" v-html="f.logoHtml"></div>
+            <img :src="f.logo" :alt="f.name" class="finance-logo-img" />
           </div>
           <div class="finance-name">{{ f.name }}</div>
           <ul class="finance-features">
@@ -45,33 +45,28 @@
 <script setup>
 const financePartners = [
   {
-    name: 'Bajaj Finance',
-    logoHtml: 'Bajaj<br><span style="color:#1A1A1A;background:#FF6B00;padding:0.1rem 0.4rem;border-radius:3px;font-size:1rem;">Finance</span>',
-    style: 'color:#FF6B00;font-size:1.5rem;font-weight:900;letter-spacing:0.04em;text-align:center;',
+    name: 'Bajaj Finserv',
+    logo: '/finserv-logo/Bajaj-Finserv-Logo.jpg',
     features: ['Instant loan approval', '0% processing fee offers', 'Flexible EMI options'],
   },
   {
     name: 'HDFC Bank',
-    logoHtml: 'HDFC<br><span style="font-size:0.85rem;color:#aaa;">Bank</span>',
-    style: 'color:#003087;font-size:1.1rem;font-weight:900;letter-spacing:0.06em;text-align:center;',
+    logo: '/finserv-logo/IMG-20220411-WA0023.jpg',
     features: ['Low interest rates', 'Up to 7-year tenure', 'Quick disbursal'],
   },
   {
     name: 'ICICI Bank',
-    logoHtml: 'ICICI<br><span style="font-size:0.85rem;color:#aaa;">Bank</span>',
-    style: 'color:#F7941D;font-size:1.1rem;font-weight:900;text-align:center;',
+    logo: '/finserv-logo/icici-bank-Finserv-Logo.jpg',
     features: ['Pre-approved loans', 'Minimal documentation', 'Online application'],
   },
   {
     name: 'SBI Auto Loan',
-    logoHtml: 'SBI<br><span style="font-size:0.85rem;color:#aaa;">Auto Loan</span>',
-    style: 'color:#1A9A2A;font-size:1.1rem;font-weight:900;text-align:center;',
+    logo: '/finserv-logo/sbi-finance-logo.png',
     features: ['Lowest interest rate', 'Up to 85% funding', 'No hidden charges'],
   },
   {
-    name: 'Muthoot Capital',
-    logoHtml: 'Muthoot<br><span style="font-size:0.75rem;color:#aaa;">Capital Services</span>',
-    style: 'color:#D84040;font-size:1.1rem;font-weight:900;text-align:center;',
+    name: 'Muthoot Finance',
+    logo: '/finserv-logo/Muthoot-finance-logo.png',
     features: ['Two-wheeler & car loans', 'Same-day sanction', 'Low CIBIL score OK'],
   },
 ]
@@ -103,9 +98,15 @@ const financePartners = [
   transform: translateY(-5px);
 }
 .finance-logo-wrap {
-  height: 56px; display: flex; align-items: center; justify-content: center;
+  height: 64px; display: flex; align-items: center; justify-content: center;
   margin-bottom: 1rem;
-  background: rgba(255,255,255,0.06); border-radius: 8px; padding: 0.5rem;
+  background: #ffffff; border-radius: 8px; padding: 0.6rem 1rem;
+}
+.finance-logo-img {
+  max-height: 44px;
+  max-width: 140px;
+  width: 100%;
+  object-fit: contain;
 }
 .finance-name { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.85rem; }
 .finance-features { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }

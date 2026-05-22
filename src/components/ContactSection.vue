@@ -34,7 +34,7 @@
           <div class="map-frame">
             <div ref="mapEl" class="map-container"></div>
             <div class="map-overlay-badge">
-              <i class="fas fa-location-dot"></i> SK Cars, Tachanallur
+              <i class="fas fa-location-dot"></i> SK Cars, Thachanallur
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const contactItems = [
   {
     icon: 'fas fa-location-dot',
     title: 'Our Address',
-    value: 'No. 7C Balaji Avenue, 2nd Cross Street,<br>Tachanallur, Tirunelveli — 627358<br><span style="color:var(--gold);font-size:0.8rem;">(Near Railway Gate)</span>',
+    value: 'No. 7C Balaji Avenue, 2nd Cross Street,<br>Thachanallur, Tirunelveli — 627358<br><span style="color:var(--gold);font-size:0.8rem;">(Near Railway Gate)</span>',
   },
   {
     icon: 'fas fa-phone',
@@ -125,7 +125,7 @@ onMounted(() => {
   marker.bindPopup(`
     <div class="sk-popup">
       <div class="sk-popup-title">SK Cars</div>
-      <div class="sk-popup-addr">No. 7C Balaji Avenue, 2nd Cross Street<br>Tachanallur, Tirunelveli — 627358</div>
+      <div class="sk-popup-addr">No. 7C Balaji Avenue, 2nd Cross Street<br>Thachanallur, Tirunelveli — 627358</div>
       <a href="https://maps.app.goo.gl/X8Y5iJ6YjAa3jtM57" target="_blank" rel="noopener" class="sk-popup-dir">
         Get Directions ↗
       </a>

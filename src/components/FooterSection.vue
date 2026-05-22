@@ -32,7 +32,7 @@
           <div class="footer-col">
             <div class="footer-col-title">Contact</div>
             <ul>
-              <li><i class="fas fa-location-dot"></i> Tachanallur, Tirunelveli — 627358</li>
+              <li><i class="fas fa-location-dot"></i> Thachanallur, Tirunelveli — 627358</li>
               <li><i class="fas fa-phone"></i> +91 99448 66887</li>
               <li><i class="fab fa-instagram"></i> @sk_cars_tirunelveli</li>
             </ul>
@@ -43,7 +43,7 @@
       <div class="footer-bottom">
         <span>© {{ year }} SK Cars. All rights reserved.</span>
         <span class="footer-divider">·</span>
-        <span>Tachanallur, Tirunelveli</span>
+        <span>Thachanallur, Tirunelveli</span>
       </div>
     </div>
   </footer>
