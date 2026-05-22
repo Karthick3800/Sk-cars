@@ -52,9 +52,9 @@ import * as THREE from 'three'
 const threeContainer = ref(null)
 
 const stats = [
-  { num: '3000+', label: 'Cars Sold' },
+  { num: '5000+', label: 'Cars Sold' },
   { num: '4.1★',  label: 'Rated on Justdial' },
-  { num: '5000+', label: 'Happy Customers' },
+  { num: '8000+', label: 'Happy Customers' },
 ]
 
 let renderer, animFrameId

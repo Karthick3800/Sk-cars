@@ -121,9 +121,9 @@
 import { onMounted } from 'vue'
 
 const stats = [
-  { target: 25,   decimal: false, suffix: '+', label: 'Years Experience' },
-  { target: 3000, decimal: false, suffix: '+', label: 'Cars Sold' },
-  { target: 5000, decimal: false, suffix: '+', label: 'Happy Customers' },
+  { target: 38,   decimal: false, suffix: '+', label: 'Years Experience' },
+  { target: 5000, decimal: false, suffix: '+', label: 'Cars Sold' },
+  { target: 8000, decimal: false, suffix: '+', label: 'Happy Customers' },
   { target: 4.1,  decimal: true,  suffix: '★', label: 'Justdial Rating' },
 ]
 

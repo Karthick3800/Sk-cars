@@ -47,14 +47,14 @@
 
 <script setup>
 const miniStats = [
-  { icon: 'fas fa-calendar-check', label: 'Est. 1999' },
-  { icon: 'fas fa-car',            label: '3000+ Cars Sold' },
-  { icon: 'fas fa-users',          label: '5000+ Customers' },
+  { icon: 'fas fa-calendar-check', label: 'Est. 1987' },
+  { icon: 'fas fa-car',            label: '5000+ Cars Sold' },
+  { icon: 'fas fa-users',          label: '8000+ Customers' },
 ]
 const visStats = [
-  { num: '25+',   label: 'Years' },
-  { num: '3000+', label: 'Cars Sold' },
-  { num: '5000+', label: 'Customers' },
+  { num: '38+',   label: 'Years' },
+  { num: '5000+', label: 'Cars Sold' },
+  { num: '8000+', label: 'Customers' },
   { num: '4.1★',  label: 'Rating' },
 ]
 </script>
