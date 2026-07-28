@@ -33,12 +33,13 @@ const menuOpen    = ref(false)
 const activeSection = ref('hero')
 
 const navLinks = [
-  { href: '#about',        id: 'about',        label: 'About' },
-  { href: '#services',     id: 'services',     label: 'Services' },
-  { href: '#cars',         id: 'cars',         label: 'Brands' },
-  { href: '#finance',      id: 'finance',      label: 'Finance' },
-  { href: '#why-us',       id: 'why-us',       label: 'Why Us' },
-  { href: '#contact',      id: 'contact',      label: 'Contact' },
+  { href: '#about',          id: 'about',          label: 'About' },
+  { href: '#available-cars', id: 'available-cars', label: 'Available Cars' },
+  { href: '#services',       id: 'services',       label: 'Services' },
+  { href: '#cars',           id: 'cars',           label: 'Brands' },
+  { href: '#finance',        id: 'finance',        label: 'Finance' },
+  { href: '#why-us',         id: 'why-us',         label: 'Why Us' },
+  { href: '#contact',        id: 'contact',        label: 'Contact' },
 ]
 
 function onScroll() {

@@ -3,6 +3,7 @@
     <NavBar />
     <HeroSection />
     <AboutSection />
+    <AvailableCarsSection />
     <ServicesSection />
     <BrandsSection />
     <WhyUsSection />
@@ -19,6 +20,7 @@ import { onMounted } from 'vue'
 import NavBar from './components/NavBar.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
+import AvailableCarsSection from './components/AvailableCarsSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import BrandsSection from './components/BrandsSection.vue'
 import WhyUsSection from './components/WhyUsSection.vue'
