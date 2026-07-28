@@ -67,8 +67,8 @@ const rawCars = [
   { name: 'Volkswagen Virtus GT',          type: 'Sedan', image: '/car-photos/vw-virtus-gt.jpg' },
   { name: 'Toyota Innova Crysta',          type: 'MPV',   image: '/car-photos/toyota-innova-crysta-silver.jpg' },
   { name: 'Toyota Innova',                 type: 'MPV',   image: '/car-photos/toyota-innova.jpg' },
-  { name: 'Maruti Suzuki XL6',             type: 'MPV',   image: '/car-photos/maruti-xl6.jpg' },
-  { name: 'Maruti Suzuki Grand Vitara',    type: 'SUV',   image: '/car-photos/maruti-grand-vitara.jpg' },
+  { name: 'Maruti Suzuki XL6',             type: 'MPV',   image: '/car-photos/maruti-xl6-black.jpg' },
+  { name: 'Maruti Suzuki XL6',             type: 'MPV',   image: '/car-photos/maruti-xl6-grey.jpg' },
   { name: 'KIA Seltos',                    type: 'SUV',   image: '/car-photos/kia-seltos.jpg' },
   { name: 'KIA Sonet',                     type: 'SUV',   image: '/car-photos/kia-sonet.jpg' },
 ]
