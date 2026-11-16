@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27d%20like%20to%20enquire%20about%20a%20car"
+    href="https://wa.me/917397072111?text=Hi%20SK%20Cars%2C%20I%27d%20like%20to%20enquire%20about%20a%20car"
     target="_blank"
     rel="noopener"
     class="floating-wa"

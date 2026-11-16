@@ -11,10 +11,10 @@
             <a href="https://www.instagram.com/sk_cars_tirunelveli/" target="_blank" rel="noopener" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://wa.me/919944866887" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="https://wa.me/917397072111" target="_blank" rel="noopener" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="tel:+919944866887" aria-label="Phone">
+            <a href="tel:+917397072111" aria-label="Phone">
               <i class="fas fa-phone"></i>
             </a>
           </div>
@@ -33,7 +33,7 @@
             <div class="footer-col-title">Contact</div>
             <ul>
               <li><i class="fas fa-location-dot"></i> Thachanallur, Tirunelveli — 627358</li>
-              <li><i class="fas fa-phone"></i> +91 99448 66887</li>
+              <li><i class="fas fa-phone"></i> +91 73970 72111</li>
               <li><i class="fab fa-instagram"></i> @sk_cars_tirunelveli</li>
             </ul>
           </div>

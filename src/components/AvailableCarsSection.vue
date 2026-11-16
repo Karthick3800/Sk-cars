@@ -27,7 +27,7 @@
       </div>
 
       <div class="text-center" style="margin-top:3rem;">
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20please%20share%20your%20current%20stock"
+        <a href="https://wa.me/917397072111?text=Hi%20SK%20Cars%2C%20please%20share%20your%20current%20stock"
            target="_blank" rel="noopener" class="btn btn-gold reveal">
           <i class="fab fa-whatsapp"></i> See Full Stock on WhatsApp
         </a>
@@ -55,7 +55,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-const WA_NUMBER = '919944866887'
+const WA_NUMBER = '917397072111'
 const waLinkFor = (name) =>
   `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(`Hi SK Cars, I'm interested in the ${name}`)}`
 

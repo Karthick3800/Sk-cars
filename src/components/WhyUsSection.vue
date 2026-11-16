@@ -104,11 +104,11 @@
           <div class="cta-banner-sub">Talk to our team today — we'll match you with the right car at the right price.</div>
         </div>
         <div class="cta-banner-right">
-          <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27d%20like%20help%20finding%20a%20car"
+          <a href="https://wa.me/917397072111?text=Hi%20SK%20Cars%2C%20I%27d%20like%20help%20finding%20a%20car"
              target="_blank" rel="noopener" class="btn btn-whatsapp">
             <i class="fab fa-whatsapp"></i> Chat with Us
           </a>
-          <a href="tel:+919944866887" class="btn btn-outline">
+          <a href="tel:+917397072111" class="btn btn-outline">
             <i class="fas fa-phone"></i> Call Now
           </a>
         </div>

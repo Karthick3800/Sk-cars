@@ -19,11 +19,11 @@
           </div>
 
           <div class="contact-actions">
-            <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27d%20like%20to%20enquire%20about%20a%20car"
+            <a href="https://wa.me/917397072111?text=Hi%20SK%20Cars%2C%20I%27d%20like%20to%20enquire%20about%20a%20car"
                target="_blank" rel="noopener" class="btn btn-whatsapp">
               <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
-            <a href="tel:+919944866887" class="btn btn-outline">
+            <a href="tel:+917397072111" class="btn btn-outline">
               <i class="fas fa-phone"></i> Call Now
             </a>
           </div>
@@ -57,12 +57,12 @@ const contactItems = [
   {
     icon: 'fas fa-phone',
     title: 'Phone',
-    value: '<a href="tel:+919944866887" style="color:var(--text);text-decoration:none;">+91 99448 66887</a>',
+    value: '<a href="tel:+917397072111" style="color:var(--text);text-decoration:none;">+91 73970 72111</a>',
   },
   {
     icon: 'fab fa-whatsapp',
     title: 'WhatsApp',
-    value: '<a href="https://wa.me/919944866887" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;">+91 99448 66887</a>',
+    value: '<a href="https://wa.me/917397072111" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;">+91 73970 72111</a>',
   },
   {
     icon: 'fab fa-instagram',

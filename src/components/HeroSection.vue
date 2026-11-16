@@ -22,7 +22,7 @@
         <a href="#cars" class="btn btn-gold">
           <i class="fas fa-car"></i> Browse Cars
         </a>
-        <a href="https://wa.me/919944866887?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
+        <a href="https://wa.me/917397072111?text=Hi%20SK%20Cars%2C%20I%27m%20looking%20for%20a%20used%20car"
            target="_blank" rel="noopener" class="btn btn-whatsapp">
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
